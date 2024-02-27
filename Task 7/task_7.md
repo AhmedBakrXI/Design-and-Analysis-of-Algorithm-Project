@@ -8,7 +8,9 @@ guarantees hitting the target.
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="100%"><a href="https://github.com/Mennatallah74"><img src="https://github.com/Mennatallah74.png" width="100px;" alt="Menna"/><br /><sub><b>Mennatallah</b></sub></a><br />🌸</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/Mennatallah74"><img src="https://github.com/Mennatallah74.png" width="100px;" alt="Menna"/><br /><sub><b>Mennatallah</b></sub></a><br />🌸</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/MightyMaya"><img src="https://github.com/MightyMaya.png" width="100px;" alt="Maya"/><br /><sub><b>Maya Sharaf</b></sub></a><br />🌷</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/Saraashrf"><img src="https://github.com/Saraashrf.png" width="100px;" alt="Sara"/><br /><sub><b>Sara Ashraf</b></sub></a><br />🌟</td>
     </tr>
   </tbody>
 </table>
