@@ -12,8 +12,9 @@ Design greedy algorithm to find the minimum number of moves.
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="50%"><a href="https://github.com/Ahmed-Khaled-Abdelmaksod"><img src="https://github.com/Ahmed-Khaled-Abdelmaksod.png" width="100px;" alt="Ahmed Khaled"/><br /><sub><b>Ahmed Khaled</b></sub></a><br />🤨</td>
-      <td align="center" valign="top" width="50%"><a href="https://github.com/Somaya-Ayman"><img src="https://github.com/Somaya-Ayman.png" width="100px;" alt="Somaya-Ayman"/><br /><sub><b>Somaya Ayman</b></sub></a><br />💫</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/Ahmed-Khaled-Abdelmaksod"><img src="https://github.com/Ahmed-Khaled-Abdelmaksod.png" width="100px;" alt="Ahmed Khaled"/><br /><sub><b>Ahmed Khaled</b></sub></a><br />🤨</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/Somaya-Ayman"><img src="https://github.com/Somaya-Ayman.png" width="100px;" alt="Somaya-Ayman"/><br /><sub><b>Somaya Ayman</b></sub></a><br />💫</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/MightyMaya"><img src="https://github.com/MightyMaya.png" width="100px;" alt="Maya"/><br /><sub><b>Maya Sharaf</b></sub></a><br />🌷</td>
     </tr>
   </tbody>
 </table>
