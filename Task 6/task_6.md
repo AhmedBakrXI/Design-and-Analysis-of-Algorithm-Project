@@ -15,8 +15,9 @@ at any time.
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="50%"><a href="https://github.com/SemoMoh"><img src="https://github.com/SemoMoh.png" width="100px;" alt="Eslam"/><br /><sub><b>Eslam Mohammed</b></sub></a><br />🗡️</td>
-      <td align="center" valign="top" width="50%"><a href="https://github.com/Mennatallah74"><img src="https://github.com/Mennatallah74.png" width="100px;" alt="Menna"/><br /><sub><b>Mennatallah</b></sub></a><br />🌸</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/SemoMoh"><img src="https://github.com/SemoMoh.png" width="100px;" alt="Eslam"/><br /><sub><b>Eslam Mohammed</b></sub></a><br />🗡️</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/Mennatallah74"><img src="https://github.com/Mennatallah74.png" width="100px;" alt="Menna"/><br /><sub><b>Mennatallah</b></sub></a><br />🌸</td>
+      <td align="center" valign="top" width="33.33%"><a href="https://github.com/waelmarwan7"><img src="https://github.com/waelmarwan7.png" width="100px;" alt="Marwan"/><br /><sub><b>Marwan Wael</b></sub></a><br />💥</td>
     </tr>
   </tbody>
 </table>
