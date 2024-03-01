@@ -2,7 +2,11 @@
 Is it possible for a chess knight to visit all the cells of an 8 × 8 chessboard exactly once, ending at a cell one knight’s
 move away from the starting cell? (Such a tour is called closed or re-entrant. Note that a cell is considered visited only
 when the knight lands on it, not just passes over it on its move.)
+<br>
 If it is possible design a greedy algorithm to find the minimum number of moves the chess knight needs.
+
+# Answer
+Yes, it's possible and it requires **64 moves** to be done.
 
 # Members:
 <table>
