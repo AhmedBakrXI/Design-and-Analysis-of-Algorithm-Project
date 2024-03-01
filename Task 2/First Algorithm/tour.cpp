@@ -38,7 +38,7 @@ bool searchClosedKnightTour(int x_init, int y_init) {
 }
 
 bool isOnBoardSquare(int x, int y) {
-    return ((x >= 0) && (y >= 0) && (x <= N) && (y <= N));
+    return ((x >= 0) && (y >= 0) && (x < N) && (y < N));
 }
 
 bool isEmptySquare(int x, int y) {
