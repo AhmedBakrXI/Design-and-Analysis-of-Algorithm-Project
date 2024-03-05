@@ -6,7 +6,7 @@ moved at a time, and it is forbidden to place a larger disk on top of a smaller 
 Does the Dynamic Programing algorithm can solve the puzzle in 33 moves? If not then design an algorithm that
 solves the puzzle in 33 moves.
 # Members:
-<table align="center">
+<table>
   <tbody>
     <tr>
       <td align="center" valign="top" width="33.33%"><a href="https://github.com/Karim-308"><img src="https://github.com/Karim-308.png" width="100px;" alt="Kimo"/><br /><sub><b>Karim Ibrahim</b></sub></a><br />🫡</td>
