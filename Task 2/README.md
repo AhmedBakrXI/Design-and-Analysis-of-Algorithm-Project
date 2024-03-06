@@ -71,17 +71,16 @@ We can make a closed tour on a chess board using a knight without moving to a sq
 
 ## Analytics
 
-
 <table>
   <tbody>
     <tr>
       <td align="center" valign="top" width="100%">
-        <img src="https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/114930002/1c0e4eca-ad80-419d-b8a5-acdfc572089b" alt="No. of Trials to Find Closed Path vs. Initializing Square">
+        <img src="https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/114930002/7edf24a7-f8ef-4e1f-ae1a-ec2d571712a0" alt="No. of Trials to Find Closed Path vs. Initializing Square">
       </td>
     </tr>
     <tr>
       <td align="center" valign="top" width="100%">
-        <img src="https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/114930002/187dddd3-ff4b-44e0-97f9-34f47a874ea8" alt="No. of Moves to Find Closed Path vs. Initializing Square">
+        <img src="https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/114930002/3da81528-6bb8-4ce7-8e24-44bd80f650ea" alt="No. of Moves to Find Closed Path vs. Initializing Square">
       </td>
     </tr>
   </tbody>
