@@ -5,7 +5,7 @@ when the knight lands on it, not just passes over it on its move.)
 <br>
 If it is possible design a greedy algorithm to find the minimum number of moves the chess knight needs.
 
-# Answer
+## Answer
 Yes, it's possible.
 
 ## Pseudocode
@@ -90,8 +90,16 @@ We can make a closed tour on a chess board using a knight without moving to a sq
 ## References
 https://sites.science.oregonstate.edu/math_reu/proceedings/REU_Proceedings/Proceedings2004/2004Ganzfried.pdf
 
+## Visualization
 
-# Members
+
+
+
+https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/114930002/2ef3c391-5081-4ee1-8eaf-c8e4ea17c26d
+
+
+
+## Members
 <table>
   <tbody>
     <tr>
