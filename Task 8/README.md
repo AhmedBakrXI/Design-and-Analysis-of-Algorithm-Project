@@ -5,6 +5,42 @@ to find this fake box.
 <br>
 Design a brute force algorithm to solve this problem.
 
+## Pseudo Code:
+``` python
+Initialize total_weight to 0
+Initialize fake_box_index to 0
+
+for index from 1 to 50:
+    balls_count = index
+    total_weight += balls_count * weight_of_non_fake_ball
+    new_box_weight = balls_count * weight_of_non_fake_ball
+end
+
+Place the new box on the digital scale
+real_weight = weight measured by the scale
+
+fake_box_index = (total_weight - real_weight) / weight_of_non_fake_ball
+
+Display "Weight Difference: ", (total_weight - real_weight)
+Display "Fake Box index: ", fake_box_index
+
+```
+
+## Complexity Analysis:
+Time Complexity: O(n), where n is the no. of boxes.
+Space Complexity: O(1)
+
+## Sample Output:
+Input:
+```
+2 21
+```
+Output:
+```
+Weight Difference: 42
+Fake Box index: 21
+```
+
 ## GUI Visualization:
 
 
