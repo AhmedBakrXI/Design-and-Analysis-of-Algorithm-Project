@@ -6,7 +6,7 @@ when the knight lands on it, not just passes over it on its move.)
 If it is possible design a greedy algorithm to find the minimum number of moves the chess knight needs.
 
 ## Answer
-Yes, it's possible.
+Yes, it's possible & The minimum number of moves is 64 move.
 
 ## Pseudocode
 ```python
@@ -28,7 +28,7 @@ while not finding closed path tour:
 end
 ```
 ## Complexity Analysis
-Time complexity: O(N^3)
+Time complexity: O(N^3 * m), where N is the width of the chess board and m is the number of trials to find the solution.
 <br>
 Space Complexity: O(N^2), Such That The Chess Board is N x N.
 ## Sample Output
