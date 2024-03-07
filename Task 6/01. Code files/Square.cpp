@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * @file   Square.cpp
+ * @brief  Implementation of the Square class.
+ * 
+ * @author eslam
+ * @date   March 2024
+ *********************************************************************/
+
 #include "Square.h"
 
 // counter initialization
@@ -5,44 +13,45 @@ int Square::counter = 0;
 
 bool Square::placeKnight(const string* knight)
 {
-	// no more than one piece in the square.
-	// no piece takes other piece.
-	if (this->knight != nullptr) {
-		return false;
-	}
+    ///
+    /// Check if the square already contains a knight
+    /// no more than one piece in the square.
+    /// no piece takes other piece.
+    /// 
+    if (this->knight != nullptr)
+        return false;
 
-	this->knight = knight;
-	return true;
-}
+    // Place the knight on the square
+    this->knight = knight;
+    return true;
+}// placeKnight()
 
-const string* Square::getKnight()
+const string* Square::getKnight() const
 {
-	return this->knight;
-}
+    return this->knight;
+}// getKnight()
 
 const string* Square::removeKnight()
 {
-	// empty case
-	if (this->knight == nullptr) {
-		return nullptr;
-	}
+    // If the square is empty, return nullptr
+    if (this->knight == nullptr)
+        return nullptr;
 
-	// mark the knight as the prev one.
-	this->prevValue = this->knight;
+    // Save the value of the previous knight
+    this->prevValue = this->knight;
 
-	//get and remove the knight value
-	const string* result = this->knight;
-	this->knight = nullptr;
+    // Remove the knight from the square
+    this->knight = nullptr;
+    // Return pointer to the removed knight
+    return this->prevValue;
+}// removeKnight()
 
-	return result;
-}
-
-const string* Square::getPrevValue()
+const string* Square::getPrevValue() const
 {
-	return this->prevValue;
-}
+    return this->prevValue;
+}// getPrevValue()
 
-int Square::getPosNo()
+int Square::getPosNo() const
 {
-	return this->posNo;
-}
+    return this->posNo;
+}// getPosNo()

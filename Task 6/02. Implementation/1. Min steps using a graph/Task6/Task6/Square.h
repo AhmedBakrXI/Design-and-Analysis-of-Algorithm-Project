@@ -1,50 +1,84 @@
+/*****************************************************************//**
+ * @file   Square.h
+ * @brief Declaration of the Square class.
+ * 
+ * @author eslam
+ * @date   March 2024
+ *********************************************************************/
+
 #pragma once
 #ifndef SQUARE_H
 #define SQUARE_H
 
 #include <string>
+
 using namespace std;
 
-
+/**
+ * @brief Represents a square on the chessboard.
+ */
 class Square
 {
 public:
-	Square() {
-		posNo = counter;
-		counter++;
-		knight = nullptr;
-		prevValue = nullptr;
-	}
+    /**
+     * @brief Constructor for the Square class.
+     * Initialize the position number of the square as its declaration order.
+     */
+    Square() : posNo(counter++), knight(nullptr), prevValue(nullptr) {}
 
-	bool placeKnight(const string* knight);
-	const string* getKnight();
-	const string* removeKnight();
-	const string* getPrevValue();
-	int getPosNo();
+    /**
+     * @brief Places a knight on the square.
+     * @param knight Pointer to the knight to be placed.
+     * @return True if the knight was successfully placed, false otherwise.
+     * @details Returns false if the square already contains a knight.
+     */
+    bool placeKnight(const string* knight);
+
+    /**
+     * @brief Retrieves the knight on the square.
+     * @return Pointer to the knight on the square, or nullptr if no knight is present.
+     */
+    const string* getKnight() const;
+
+    /**
+     * @brief Removes the knight from the square.
+     * @return Pointer to the removed knight.
+     * @details If a knight is present on the square, it is removed, and its value is stored as the previous value.
+     */
+    const string* removeKnight();
+
+    /**
+     * @brief Removes the knight from the square.
+     * @return Pointer to the removed knight.
+     * @details If a knight is present on the square, it is removed, and its value is stored as the previous value.
+     */  
+    const string* getPrevValue() const;
+
+    /**
+     * @brief Retrieves the position number of the square.
+     * @return The position number of the square.
+     */
+    int getPosNo() const;
 
 private:
-	// Help with numbering the squares at initialization.
-	static int counter;
+    //Static counter for numbering the squares.
+    static int counter;
+    //The position number of the square.
+    int posNo;
+    /**
+     * @brief Pointer to the knight placed on the square.
+     *
+     * The name of the piece is constructed from a character ('B' for black knight, 'W' for white knight)
+     * followed by a number representing the piece according to the documentation.
+     *
+     * The value is nullptr if the square is empty.
+     *
+     * Note: The number is in the range [1,3], where 1 represents the most left piece at the beginning.
+     */
+    const string* knight;
 
-	// The number given to the square according to the documentation, where zero is the left upper position
-	int posNo;
+    // The name of the last piece entered the square, used for certain conditions.
+    const string* prevValue;
 
-	/**
-	 * The name of the piece, It is constructed from a Char with a number.
-	 * Char:
-	 *	- 'B' for black knight.
-	 *	- 'W' for white knight.
-	 * 
-	 * Number: the number of the piece according to the documentation.
-	 * 
-	 * The value will be nullptr if the square is empty.
-	 * @note the number is in this range : {1,3}, which one is the most left piece at beginning.
-	 */
-	const string* knight;
-
-	// The name of the last piece entered the square, used for some conditions.
-	const string* prevValue;
-};
-
-
+};// class Square
 #endif // !SQUARE_H
