@@ -10,8 +10,8 @@
  *********************************************************************/
 #pragma once
 
-#ifndef CHESSBOARD_H	
-#define CHESSBOARD_H	
+#ifndef CHESS_BOARD_H
+#define CHESS_BOARD_H
 
 #include "Square.h"
 #include <vector>
@@ -24,7 +24,7 @@ using namespace std;
  * This class provides functionalities for creating and manipulating a chessboard,
  * as well as printing its current state.
  */
-class ChessBoard
+class chess_board
 {
 public:
 	/**
@@ -43,7 +43,7 @@ public:
 	 * Note: each square represented by: number (piece name), E.g., W1 is placed on position 0 at beginning.
 	 * Note: 'Em' represents an empty square.
 	 */
-	ChessBoard();
+    chess_board();
 
 	/**
 	 * @brief Prints the current state of the chessboard.

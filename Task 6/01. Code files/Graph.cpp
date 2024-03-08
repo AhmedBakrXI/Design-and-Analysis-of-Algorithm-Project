@@ -7,7 +7,7 @@
  *********************************************************************/
 #include "Graph.h"
 
-vector<Move*>* Graph::solvePuzzle()
+vector<Move> Graph::solvePuzzle()
 {
     // Initialize the queue with starting positions and other necessary variables
     // The algorithm works with starting from positions 9 and 11.
@@ -17,7 +17,7 @@ vector<Move*>* Graph::solvePuzzle()
 
     int completedSwaps = 0;
     int totalMoves = 0;
-    vector<Move*>* allMoves = new vector<Move*>(16);
+
 
     // Continue until all swaps are completed
     while (completedSwaps != 6) {
@@ -47,11 +47,11 @@ vector<Move*>* Graph::solvePuzzle()
         // Determine the color of the knight and try moving it
         // The color of knight, 0 for white, 1 for black
         int knightColor = getKnightColor(currentSquare);
-        bool hasMoved = tryMovingKnight(currentSquare, neighborSquares, knightColor, completedSwaps, totalMoves, allMoves, queue);
+        bool hasMoved = tryMovingKnight(currentSquare, neighborSquares, knightColor, completedSwaps, totalMoves, queue);
 
         // If the knight has moved, print move details
         if (hasMoved) {
-            printMoveDetails(totalMoves, currentSquare, allMoves);
+            printMoveDetails(totalMoves, currentSquare);
         }
     }
 
@@ -75,7 +75,7 @@ int Graph::getKnightColor(Square* square)
     return square->getKnight()->at(0) == 'B';
 } //getKnightColor()
 
-bool Graph::tryMovingKnight(Square* currentSquare, vector<pair<Cost, Square*>>* neighborSquares, int knightColor, int& completedSwaps, int& totalMoves, vector<Move*>* allMoves, deque<int>& queue)
+bool Graph::tryMovingKnight(Square* currentSquare, vector<pair<Cost, Square*>>* neighborSquares, int knightColor, int& completedSwaps, int& totalMoves, deque<int>& queue)
 {
     // Flag to know if any movement happened.
     bool hasMoved = false;
@@ -96,7 +96,7 @@ bool Graph::tryMovingKnight(Square* currentSquare, vector<pair<Cost, Square*>>* 
                 destinationIndex = i;
 
                 checkForFinalDestination(neighborPair, isFinalDestination, completedSwaps, knightColor);
-                storeMoveData(allMoves, currentSquare, neighborPair);
+                storeMoveData( currentSquare, neighborPair);
                 break;
             }
         }
@@ -141,13 +141,13 @@ void Graph::checkForFinalDestination(pair<Cost, Square*>* neighborPair, bool& is
     }
 }// checkForFinalDestination()
 
-void Graph::storeMoveData(vector<Move*>* allMoves, Square* currentSquare, pair<Cost, Square*>* neighborPair)
+void Graph::storeMoveData(Square* currentSquare, pair<Cost, Square*>* neighborPair)
 {
     // Store the move data in the allMoves vector
     int oldPos = currentSquare->getPosNo();
     int newPos = neighborPair->second->getPosNo();
     string knightMoved = *neighborPair->second->getKnight();
-    allMoves->push_back(new Move(oldPos, newPos, knightMoved));
+    allMoves.push_back( Move(oldPos, newPos, knightMoved));
 }// storeMoveData()
 
 void Graph::addNeighborsToQueue(vector<pair<Cost, Square*>>* neighborSquares, deque<int>& queue, int destinationIndex)
@@ -162,13 +162,13 @@ void Graph::addNeighborsToQueue(vector<pair<Cost, Square*>>* neighborSquares, de
     }
 }// addNeighborsToQueue()
 
-void Graph::printMoveDetails(int& totalMoves, Square* currentSquare, vector<Move*>* allMoves)
+void Graph::printMoveDetails(int& totalMoves, Square* currentSquare)
 {
     // Print move details including step number, board, and move
     totalMoves++;
     cout << "step number: " << totalMoves << endl;
     this->board->printBoard();
-    allMoves->back()->printMove();
+    allMoves.back().printMove();
     cout << endl;
 }// printMoveDetails()
 
@@ -179,7 +179,7 @@ void Graph::printTotalMoves(int totalMoves)
 }// printMoveDetails()
 
 
-Graph::Graph(ChessBoard& board) : board(&board)
+Graph::Graph(chess_board& board) : board(&board)
 {
     this->nodes.resize(12);
 

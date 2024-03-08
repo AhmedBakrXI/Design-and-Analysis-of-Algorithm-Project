@@ -6,9 +6,9 @@
  * @date   March 2024
  *********************************************************************/
 
-#include "ChessBoard.h"
-
-ChessBoard::ChessBoard()
+#include "chess_board.h"
+#include "Square.h"
+chess_board::chess_board()
 {
 	
 	// construct and add squares
@@ -41,7 +41,7 @@ ChessBoard::ChessBoard()
 	}
 }// ChessBoard()
 
-void ChessBoard::printBoard()
+void chess_board::printBoard()
 {
 	for (const auto& row : squars) {
 		for (const auto& square : row) {
@@ -61,12 +61,12 @@ void ChessBoard::printBoard()
 	cout << endl;
 }// printBoard()
 
-Square* ChessBoard::getSquare(int row, int col)
+Square* chess_board::getSquare(int row, int col)
 {
 	return &this->squars[row][col];
 }// getSquare()
 
-Square* ChessBoard::getSquare(int posNo)
+Square* chess_board::getSquare(int posNo)
 {
 	int row = posNo / 3;
 	int col = posNo % 3;

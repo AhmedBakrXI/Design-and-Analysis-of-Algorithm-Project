@@ -12,7 +12,7 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include "ChessBoard.h"
+#include "chess_board.h"
 #include "Move.h"
 #include <utility>
 #include <deque>
@@ -27,7 +27,7 @@ using namespace std;
  * The cost used to control the movement of knights to the correct squares.
  */
 class Cost {
-	friend class Graph;
+    friend class Graph;
 private:
 	/**
 	 * @brief Constructor for the Cost class.
@@ -64,20 +64,20 @@ private:
 class Graph
 {
 public:
-	/**
-	 * @brief Constructs a Graph object with the given ChessBoard.
-	 * 
-	 * The constructor initializes a Graph object with the provided ChessBoard by creating
-	 * nodes and establishing connections between them based on the specified rules.
-	 * Each square is connected to other squares based on specific knight moves allowed in chess.
-	 * 
-	 * TODO: add the graph with cost image.
-	 * @image html image_filename.png
-	 * @image latex image_filename.png "Caption text" width=5cm
-	 * 
-	 * @param board The ChessBoard object representing the chessboard.
-	 */
-	Graph(ChessBoard& board);
+    /**
+     * @brief Constructs a Graph object with the given ChessBoard.
+     *
+     * The constructor initializes a Graph object with the provided ChessBoard by creating
+     * nodes and establishing connections between them based on the specified rules.
+     * Each square is connected to other squares based on specific knight moves allowed in chess.
+     *
+     * TODO: add the graph with cost image.
+     * @image html image_filename.png
+     * @image latex image_filename.png "Caption text" width=5cm
+     *
+     * @param board The ChessBoard object representing the chessboard.
+     */
+    Graph(chess_board &board);
 
 	/**
 	 * @brief Prints the graph (for debugging purposes).
@@ -113,17 +113,15 @@ public:
 	 * 
 	 * @return vector<Move*>* A pointer to a vector of Move objects representing the solution.
 	 */
-	vector<Move*>* solvePuzzle();
+    vector<Move> solvePuzzle();
 private:
+    vector<Move> allMoves;
 	// Represents the nodes (squares) of the graph, each containing a cost and a pointer to a Square object.
 	vector<
-		vector
-		<pair<Cost, Square*>
-		>
-	> nodes;
+		vector<pair<Cost, Square*>>> nodes;
 
 	// ChessBoard to solve.
-	ChessBoard* board;
+    chess_board* board;
 
 	// Helper methods
 
@@ -165,12 +163,12 @@ private:
 	 * @param knightColor The color of the knight (0 for white, 1 for black).
 	 * @param completedSwaps Reference to the number of completed swaps.
 	 * @param totalMoves Reference to the total number of moves.
-	 * @param allMoves Pointer to the vector of Move objects representing all moves.
+     * @param allMoves Pointer to the vector of Move objects representing all moves.
 	 * @param queue The deque representing the positions to process.
 	 * @return bool True if the knight moved, false otherwise.
 	 */
 	bool tryMovingKnight(Square* currentSquare, vector<pair<Cost, Square*>>* neighborSquares, int knightColor, 
-		int& completedSwaps, int& totalMoves, vector<Move*>* allMoves, deque<int>& positionsToProcess);
+        int& completedSwaps, int& totalMoves, deque<int>& positionsToProcess);
 
 	/**
 	 * @brief Checks if the knight can move to a specific square.
@@ -227,7 +225,8 @@ private:
 	 * @param currentSquare Pointer to the current Square object.
 	 * @param neighborPair Pointer to the pair representing the neighbor square and its cost.
 	 */
-	void storeMoveData(vector<Move*>* allMoves, Square* currentSquare, pair<Cost, Square*>* neighborPair);
+
+    void storeMoveData(Square* currentSquare, pair<Cost, Square*>* neighborPair);
 	
 	/**
 	 * @brief Adds neighbors to the queue for processing after moving the knight.
@@ -243,14 +242,14 @@ private:
 	void addNeighborsToQueue(vector<pair<Cost, Square*>>* neighborSquares, deque<int>& positionsToProcess, int destinationIndex);
 	
 	/**
-	 * @brief Prints move details including step number, board, and move.
+     * @brief Prints move details including step number, board, and move.
 	 *
 	 * 
 	 * @param totalMoves Reference to the total number of moves.
 	 * @param currentSquare Pointer to the current Square object.
 	 * @param allMoves Pointer to the vector of Move objects representing all moves.
 	 */
-	void printMoveDetails(int& totalMoves, Square* currentSquare, vector<Move*>* allMoves);
+    void printMoveDetails(int& totalMoves, Square* currentSquare);
 	
 	/**
 		 * @brief Prints the total number of moves.
