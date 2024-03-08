@@ -1,0 +1,13 @@
+debug/main.o
+debug/Graph.o
+debug/Square.o
+debug/chess_board.o
+debug/game.o
+debug/chessbox.o
+debug/chessboard.o
+debug/chesspiece.o
+debug/knight.o
+debug/button.o
+debug/qrc_resource.o
+debug/moc_game.o
+debug/moc_button.o

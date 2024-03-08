@@ -1,0 +1,13 @@
+release/main.o
+release/Graph.o
+release/Square.o
+release/chess_board.o
+release/game.o
+release/chessbox.o
+release/chessboard.o
+release/chesspiece.o
+release/knight.o
+release/button.o
+release/qrc_resource.o
+release/moc_game.o
+release/moc_button.o
