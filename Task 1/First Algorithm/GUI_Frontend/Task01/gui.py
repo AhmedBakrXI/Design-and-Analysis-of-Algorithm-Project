@@ -32,7 +32,7 @@ class ChessboardGUI:
         size_label.grid(row=0, column=0, padx=5, pady=5, sticky='w')
 
         size_options = [2 ** i for i in range(2, 8)]  # Sizes from 4x4 to 128x128.
-        self.size_dropdown = ttk.Combobox(self.master, textvariable=self.board_size, values=size_options)
+        self.size_dropdown = ttk.Combobox(self.master, textvariable=self.board_size, values=size_options, state='readonly')
         self.size_dropdown.grid(row=0, column=1, padx=5, pady=5, sticky='w')
         self.size_dropdown.current(0)  # Set default size to the first option
 
@@ -153,7 +153,7 @@ class ChessboardGUI:
     def generate_unique_color(color_dict):
         # Generate a random color and ensure it is unique and not white or black
         while True:
-            color = "#{:06x}".format(random.randint(0, 0xFFFF11))
+            color = "#{:06x}".format(random.randint(0, 0xFFFF1F))
             if color not in color_dict.values() and color != '#000000' and color != '#FFFFFF':
                 return color
 
