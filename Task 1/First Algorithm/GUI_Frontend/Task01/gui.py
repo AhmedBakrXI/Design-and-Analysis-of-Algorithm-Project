@@ -6,6 +6,7 @@ import random
 
 class ChessboardGUI:
     def __init__(self, master):
+        self.display_window = None
         self.canvas = None
         self.hole_col_entry = None
         self.hole_row_entry = None
@@ -80,22 +81,31 @@ class ChessboardGUI:
         # Display the filled chessboard in a new window
         self.display_chessboard(output)
 
+        # Make the display window the current window
+        self.display_window.lift()
+
+        # Bind keyboard arrow events to the display window
+        self.display_window.bind("<Left>", lambda event: self.canvas.xview_scroll(-1, "units"))
+        self.display_window.bind("<Right>", lambda event: self.canvas.xview_scroll(1, "units"))
+        self.display_window.bind("<Up>", lambda event: self.canvas.yview_scroll(-1, "units"))
+        self.display_window.bind("<Down>", lambda event: self.canvas.yview_scroll(1, "units"))
+
     def display_chessboard(self, output):
         # Create a new window to display the chessboard
-        display_window = tk.Toplevel(self.master)
-        display_window.title("Filled Chessboard")
+        self.display_window = tk.Toplevel(self.master)
+        self.display_window.title("Filled Chessboard")
 
         # Create a canvas to draw the chessboard with scrollbars
-        self.canvas = tk.Canvas(display_window, width=50 * self.board_size.get(), height=50 * self.board_size.get())
+        self.canvas = tk.Canvas(self.display_window, width=50 * self.board_size.get(), height=50 * self.board_size.get())
         self.canvas.pack(side="left", fill="both", expand=True)
 
         # Add vertical scrollbar
-        y_scrollbar = ttk.Scrollbar(display_window, orient="vertical", command=self.canvas.yview)
+        y_scrollbar = ttk.Scrollbar(self.display_window, orient="vertical", command=self.canvas.yview)
         y_scrollbar.pack(side="right", fill="y")
         self.canvas.configure(yscrollcommand=y_scrollbar.set)
 
         # Add horizontal scrollbar
-        x_scrollbar = ttk.Scrollbar(display_window, orient="horizontal", command=self.canvas.xview)
+        x_scrollbar = ttk.Scrollbar(self.display_window, orient="horizontal", command=self.canvas.xview)
         x_scrollbar.pack(side="bottom", fill="x")
         self.canvas.configure(xscrollcommand=x_scrollbar.set)
 
@@ -128,6 +138,9 @@ class ChessboardGUI:
         self.canvas.create_rectangle(hole_col * 50, hole_row * 50, (hole_col + 1) * 50, (hole_row + 1) * 50,
                                      fill='#000000')
 
+        # Bind canvas resizing event
+        self.canvas.bind("<Configure>", self.update_scroll_region)
+
         # Configure canvas scroll region
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
@@ -136,6 +149,10 @@ class ChessboardGUI:
         # Bind left and right button events for touchpad gestures
         self.canvas.bind("<Button-4>", self.scroll_left)
         self.canvas.bind("<Button-5>", self.scroll_right)
+
+    def update_scroll_region(self, event):
+        """Update canvas scroll region when the canvas size changes."""
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
 
     def on_mouse_wheel(self, event):
         if event.delta > 0:
@@ -186,10 +203,6 @@ class ChessboardGUI:
 def main():
     root = tk.Tk()
     app = ChessboardGUI(root)
-    root.bind("<Left>", lambda event: app.canvas.xview_scroll(-1, "units"))
-    root.bind("<Right>", lambda event: app.canvas.xview_scroll(1, "units"))
-    root.bind("<Up>", lambda event: app.canvas.yview_scroll(-1, "units"))
-    root.bind("<Down>", lambda event: app.canvas.yview_scroll(1, "units"))
     root.mainloop()
 
 
