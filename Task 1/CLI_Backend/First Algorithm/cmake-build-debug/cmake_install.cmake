@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/karim/OneDrive/Desktop/Algo
+# Install script for directory: D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/karim/OneDrive/Desktop/Algo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

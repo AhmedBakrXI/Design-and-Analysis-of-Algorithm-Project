@@ -171,10 +171,18 @@ class ChessboardGUI:
 
     @staticmethod
     def generate_unique_color(color_dict):
-        # Generate a random color and ensure it is unique and not white or black
+        # Generate a random color and ensure it is unique and not too close to black or white
         while True:
-            color = "#{:06x}".format(random.randint(0x0000F0, 0xFFFFFF))
-            if color not in color_dict.values() and color != '#000000' and color != '#FFFFFF':
+            # Generate random RGB values (excluding too dark or too light colors)
+            r = random.randint(50, 205)
+            g = random.randint(50, 205)
+            b = random.randint(50, 205)
+
+            # Convert RGB values to hexadecimal format
+            color = "#{:02x}{:02x}{:02x}".format(r, g, b)
+
+            # Check if the color is unique and not too close to black or white
+            if color not in color_dict.values():
                 return color
 
     def on_closing(self):
