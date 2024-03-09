@@ -84,6 +84,9 @@ class ChessboardGUI:
         # Make the display window the current window
         self.display_window.lift()
 
+        # Set focus to the display window
+        self.display_window.focus_set()
+
         # Bind keyboard arrow events to the display window
         self.display_window.bind("<Left>", lambda event: self.canvas.xview_scroll(-1, "units"))
         self.display_window.bind("<Right>", lambda event: self.canvas.xview_scroll(1, "units"))
