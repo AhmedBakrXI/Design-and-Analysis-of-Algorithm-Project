@@ -136,11 +136,6 @@ class ChessboardGUI:
         # Bind left and right button events for touchpad gestures
         self.canvas.bind("<Button-4>", self.scroll_left)
         self.canvas.bind("<Button-5>", self.scroll_right)
-        # Bind arrow key events for keyboard navigation
-        self.canvas.bind("<Left>", lambda event: self.canvas.xview_scroll(-1, "units"))
-        self.canvas.bind("<Right>", lambda event: self.canvas.xview_scroll(1, "units"))
-        self.canvas.bind("<Up>", lambda event: self.canvas.yview_scroll(-1, "units"))
-        self.canvas.bind("<Down>", lambda event: self.canvas.yview_scroll(1, "units"))
 
     def on_mouse_wheel(self, event):
         if event.delta > 0:
@@ -158,7 +153,7 @@ class ChessboardGUI:
     def generate_unique_color(color_dict):
         # Generate a random color and ensure it is unique and not white or black
         while True:
-            color = "#{:06x}".format(random.randint(0, 0xFFFFF1))
+            color = "#{:06x}".format(random.randint(0, 0xFFFF11))
             if color not in color_dict.values() and color != '#000000' and color != '#FFFFFF':
                 return color
 
@@ -191,6 +186,10 @@ class ChessboardGUI:
 def main():
     root = tk.Tk()
     app = ChessboardGUI(root)
+    root.bind("<Left>", lambda event: app.canvas.xview_scroll(-1, "units"))
+    root.bind("<Right>", lambda event: app.canvas.xview_scroll(1, "units"))
+    root.bind("<Up>", lambda event: app.canvas.yview_scroll(-1, "units"))
+    root.bind("<Down>", lambda event: app.canvas.yview_scroll(1, "units"))
     root.mainloop()
 
 
