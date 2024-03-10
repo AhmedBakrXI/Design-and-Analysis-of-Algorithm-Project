@@ -4,9 +4,17 @@
 
 using namespace std; 
 
-bool check_even(int n){
-    if (n % 2 == 0) return true;
-    else return false;
+bool check_possible(int n){
+    if (n>0){
+        // loop to 31 as higher numbers cannot be represented as int
+        for (int i = 2; i<31; i++){
+            if (n == (pow (2,i)) -2) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+    else return 0;
 }
 
 bool check_done(vector<int> &coins){
@@ -26,7 +34,7 @@ void jump(vector<int> &coins, int coin1_position, int coin2_position){
 }
 
 int minimum_moves(vector<int> &coins){
-    if (!check_even(coins.size())) return -1;
+    if (!check_possible(coins.size())) return -1;
     int moves = 0;
     if(!check_done(coins)){
     for (int i = 0; i < coins.size(); i++){
