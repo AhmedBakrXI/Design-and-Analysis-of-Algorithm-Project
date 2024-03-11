@@ -40,7 +40,16 @@ Output:
 Weight Difference: 42
 Fake Box index: 21
 ```
-
+Random Sample:
+```
+Entered Fake Box Index: 34
+Entered Weight of Each Ball: 23
+================================================================
+Expected Weight: 29325
+Sum of weights drawn from each Box weighed on digital balance: 29290
+Calculated Fake Box Index: 34
+Checking if it is a fake box by asking the box it self and it said: True, I am the  the fake box and my id is 34
+```
 ## GUI Visualization:
 
 
