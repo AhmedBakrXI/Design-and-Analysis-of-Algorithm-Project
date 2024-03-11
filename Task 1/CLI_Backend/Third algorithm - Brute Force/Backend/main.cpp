@@ -1,12 +1,10 @@
 #include <iostream>
-#include <cmath>
 #include <vector>
 #include <utility>
-
+#include <cstdlib>
 
 using namespace std;
 
-unsigned long long c = 0;
 
 class Tromino {
 public:
@@ -33,12 +31,9 @@ int main(int argc, char *argv[]) {
     int xCoordinate = strtol(argv[2], nullptr, 10) - 1;
     int yCoordinate = strtol(argv[3], nullptr, 10) - 1;
 
-    int n = 2;
-    pair<int, int> missingSquarePos = {xCoordinate, yCoordinate};
-
 
     vector<vector<int>> board(boardSize, vector<int>(boardSize, 0));
-    board[missingSquarePos.first][missingSquarePos.second] = -1;
+    board[xCoordinate][yCoordinate] = -1;
 
     solve(board);
 
@@ -89,24 +84,20 @@ void solve(vector<vector<int>> &board) {
         if (tromino.pos.first == board.size()) {
             tromino.pos.first = 0;
         }
-        for (true; tromino.pos.first < board.size(); tromino.pos.first++) {
+        for (; tromino.pos.first < board.size(); tromino.pos.first++) {
             bool breakLoop = false;
 
             if (tromino.pos.second == board.size()) {
                 tromino.pos.second = 0;
             }
 
-            for (true; tromino.pos.second < board.size(); tromino.pos.second++) {
+            for (; tromino.pos.second < board.size(); tromino.pos.second++) {
 
                 // if the missing square skip it or contains another tromino
                 if (board[tromino.pos.first][tromino.pos.second] != 0) {
                     continue;
                 }
 
-                bool squareFirstTry = false;
-                if (tromino.form == -1) {
-                    squareFirstTry = true;
-                }
 
                 tromino.form++;
 
@@ -174,8 +165,6 @@ void solve(vector<vector<int>> &board) {
 
 
 void printBoard(vector<vector<int>> &board) {
-    cout << "step: " << c << endl;
-    c++;
     for (int i = 0; i < board.size(); i++) {
         for (int j = 0; j < board.size(); j++) {
             cout << board[i][j] << " \t";

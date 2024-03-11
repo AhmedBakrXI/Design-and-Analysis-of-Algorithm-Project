@@ -74,10 +74,13 @@ class ChessboardGUI:
             return
 
         # Call the C++ backend to fill the chessboard with L-trominoes
-        process = subprocess.Popen(["./a.out", str(size), str(hole_row), str(hole_col)], stdout=subprocess.PIPE,
+        process = subprocess.Popen(["./a.out", str(size), str(hole_row), str(hole_col)], stdout=subprocess.PIPE,  stderr=subprocess.PIPE,
                                    text=True)
-        output, _ = process.communicate()
+        output, error = process.communicate()
+        print("Output:", output)
 
+        if error:
+            print("Error", error)
         # Display the filled chessboard in a new window
         self.display_chessboard(output)
 
