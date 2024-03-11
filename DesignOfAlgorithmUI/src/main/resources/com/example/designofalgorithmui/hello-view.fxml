@@ -133,7 +133,7 @@
                            <children>
                               <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../Users/AHMED%20BAKR/Downloads/image-removebg-preview%20(7).png" />
+                                    <Image url="@images/Task2.png" />
                                  </image>
                               </ImageView>
                               <VBox prefHeight="59.0" prefWidth="140.0">
@@ -256,7 +256,7 @@
                                  <graphic>
                                     <ImageView fx:id="playBtn2" fitHeight="38.0" fitWidth="45.0" onMouseEntered="#expandBtn2" onMouseExited="#shrinkBtn2" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../../../../../Users/AHMED%20BAKR/Downloads/126583.png" />
+                                          <Image url="@images/play.png" />
                                        </image>
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
@@ -412,7 +412,7 @@
                                  <graphic>
                                     <ImageView fx:id="playBtn4" fitHeight="38.0" fitWidth="45.0" onMouseEntered="#expandBtn4" onMouseExited="#shrinkBtn4" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../../../../../Users/AHMED%20BAKR/Downloads/126583.png" />
+                                          <Image url="@images/play.png" />
                                        </image>
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
