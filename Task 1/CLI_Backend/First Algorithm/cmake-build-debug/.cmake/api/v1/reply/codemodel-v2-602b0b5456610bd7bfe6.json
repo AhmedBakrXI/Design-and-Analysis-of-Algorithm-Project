@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm/cmake-build-debug",
-		"source" : "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm"
+		"build" : "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm/cmake-build-debug",
+		"source" : "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm"
 	},
 	"version" : 
 	{

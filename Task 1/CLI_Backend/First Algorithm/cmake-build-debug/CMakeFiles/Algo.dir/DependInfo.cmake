@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm/main.cpp" "CMakeFiles/Algo.dir/main.cpp.obj" "gcc" "CMakeFiles/Algo.dir/main.cpp.obj.d"
+  "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm/main.cpp" "CMakeFiles/Algo.dir/main.cpp.obj" "gcc" "CMakeFiles/Algo.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
