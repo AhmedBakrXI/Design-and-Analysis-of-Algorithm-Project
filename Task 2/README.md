@@ -19,10 +19,10 @@ while not finding closed path tour:
     
     for i from 0 to N * N - 1:
         if not pickNextMove(x, y):
-            continue
+            exit()
             
     if not isNeighbourSquare(x, y, x_init, y_init):
-        continue
+        exit()
         
     printChessBoard()
 end
