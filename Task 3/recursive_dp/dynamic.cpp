@@ -2,14 +2,11 @@
 using namespace std;
 
 // Helper Function
-int min_switch_helper(int n, int* ans)
+unsigned long long min_moves_helper(int n, unsigned long long* ans)
 {
     // Base case
-    if (n == 1) {
-        return 1;
-    }
-    if(n==2){
-        return 2;
+    if (n==1 || n==2) {
+        return n;
     }
 
     // To check if output already exists
@@ -18,7 +15,7 @@ int min_switch_helper(int n, int* ans)
     }
 
     // Calculate output
-    int x = min_switch_helper(n -1, ans)+2* min_switch_helper(n-2,ans)+1;
+    unsigned long long x = min_moves_helper(n -1, ans)+2* min_moves_helper(n-2,ans)+1;
     // Saving the output for future use
     ans[n] = x;
 
@@ -26,21 +23,20 @@ int min_switch_helper(int n, int* ans)
     return ans[n];
 }
 
-int min_switch(int n)
+unsigned long long min_moves(int n)
 {
-    int* ans = new int[n + 1];
+    unsigned long long* ans = new unsigned long long [n + 1];
 
     // Initializing with -1
     for (int i = 0; i <= n; i++) {
         ans[i] = -1;
     }
-    return min_switch_helper(n, ans);
+    return min_moves_helper(n, ans);
 }
 
 int main()
 {
-    int n = 4; // number of switches
-
-    cout << "Minimum number of moves needed to turn off all switches : "<< min_switch(n);
+    int n=4; // Number of switches
+    cout<<"Minimum number of moves to turn off "<<n<<" switches is : "<<min_moves(n);
     return 0;
 }
