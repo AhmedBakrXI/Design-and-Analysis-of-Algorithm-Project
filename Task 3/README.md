@@ -15,7 +15,7 @@ moves. (Toggling one switch is considered one move.) Also find the minimum numbe
 ``` vbnet
 function min_switch_helper(n, ans):
     if n <= 2:
-        return 2
+        return n
     end if
 
     if ans[n] is not -1:
