@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1105.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.designofalgorithmui.HelloController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="665.0" styleClass="primary-background" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <children>
+            <HBox prefHeight="34.0" prefWidth="534.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon.gif" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="56.0" prefWidth="329.0" text="Design &amp; Analysis of Algorithms">
+                     <font>
+                        <Font name="Corbel Light" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane prefHeight="651.0" prefWidth="606.0">
+               <content>
+                  <VBox prefHeight="397.0" prefWidth="590.0" spacing="30.0" styleClass="primary-background">
+                     <children>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task1.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 1">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Dynamic Programming">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Somaya Ayman 💫">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Adham Khaled 😏">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Mahmoud Abdelraouf 😎">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn" onMouseExited="#shrinkBtn" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn" fitHeight="38.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask1Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task2.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 2">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Greedy Algorithm">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Ahmed Bakr 👨‍💻">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Adham Khaled 😏">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Mahmoud Abdelraouf 😎">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn1" onMouseExited="#shrinkBtn1" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn1" fitHeight="38.0" fitWidth="45.0" onMouseEntered="#expandBtn1" onMouseExited="#shrinkBtn1" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask2Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task3.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 3">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Dynamic Programming">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Ahmed Bakr 👨‍💻">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Ahmed Khaled 🤨">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Marwan Wael 💥">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn2" onMouseExited="#shrinkBtn2" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn2" fitHeight="38.0" fitWidth="45.0" onMouseEntered="#expandBtn2" onMouseExited="#shrinkBtn2" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask3Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task4.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="142.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 4">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Dynamic Programming">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="61.0" prefWidth="141.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Karim Ibrahim 🫡">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Eslam Mohammed 🗡️">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Sara Ashraf 🌟">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn3" onMouseExited="#shrinkBtn3" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn3" fitHeight="38.0" fitWidth="45.0" onMouseEntered="#expandBtn3" onMouseExited="#shrinkBtn3" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask4Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task5.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 5">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Greedy Algorithm">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Ahmed Khaled 🤨">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Somaya Ayman 💫">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Maya Sharaf 🌷">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn4" onMouseExited="#shrinkBtn4" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn4" fitHeight="38.0" fitWidth="45.0" onMouseEntered="#expandBtn4" onMouseExited="#shrinkBtn4" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask5Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task6.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 6">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Dynamic Programming">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Eslam Mohammed 🗡️">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Mennatallah 🌸">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Marwan Wael 💥">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn5" onMouseExited="#shrinkBtn" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn5" fitHeight="38.0" fitWidth="45.0" onMouseDragEntered="#expandBtn5" onMouseDragExited="#shrinkBtn5" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask6Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task7.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 7">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Iterative Improvement">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Mennatallah 🌸">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Maya Sharaf 🌷">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Sara Ashraf 🌟">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn6" onMouseExited="#shrinkBtn6" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn6" fitHeight="38.0" fitWidth="45.0" onMouseDragEntered="#expandBtn6" onMouseDragExited="#shrinkBtn6" onMouseEntered="#expandBtn6" onMouseExited="#shrinkBtn6" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask7Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="74.0" prefWidth="570.0" spacing="10.0" styleClass="card">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/Task8.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="133.0" text="Task 8">
+                                       <font>
+                                          <Font name="Corbel" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="Brute Force">
+                                       <font>
+                                          <Font name="Corbel Light" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="59.0" prefWidth="140.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="101.0" text="Members">
+                                       <font>
+                                          <Font name="Corbel" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Karim Ibrahim 🫡">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="154.0" text="- Ahmed Bakr 👨‍💻">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="138.0" text="- Abdelrahman Elsayed 🔇">
+                                       <font>
+                                          <Font name="Corbel Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseEntered="#expandBtn7" onMouseExited="#shrinkBtn7" prefHeight="59.0" prefWidth="38.0" styleClass="play-btn" text="Play">
+                                 <graphic>
+                                    <ImageView fx:id="playBtn7" fitHeight="38.0" fitWidth="45.0" onMouseDragEntered="#expandBtn7" onMouseDragExited="#shrinkBtn7" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/play.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Blend />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Hyperlink contentDisplay="CENTER" onAction="#openTask8Link" prefHeight="31.0" prefWidth="102.0" text="Read more.." textAlignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="660.0" prefWidth="446.0" styleClass="secondary-background" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="363.0" fitWidth="441.0" layoutX="36.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/illustration.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="227.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chess Tour">
+               <font>
+                  <Font name="Corbel Light" size="18.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff00" height="295.0" layoutX="117.0" layoutY="23.0" stroke="WHITE" strokeType="INSIDE" width="290.0" />
+            <ImageView fitHeight="245.0" fitWidth="249.0" layoutX="139.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gif/Task2.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
