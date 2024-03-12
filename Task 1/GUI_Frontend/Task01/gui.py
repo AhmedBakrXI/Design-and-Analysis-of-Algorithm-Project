@@ -73,6 +73,10 @@ class ChessboardGUI:
             messagebox.showerror("Error", "Row and Column values cannot be 0.")
             return
 
+        if hole_row < 1 or hole_row > size or hole_col < 1 or hole_col > size:
+            messagebox.showerror("Error", f"Hole position must be within the range 1 to {size}.")
+            return
+
         # Call the C++ backend to fill the chessboard with L-trominoes
         process = subprocess.Popen(["./a.out", str(size), str(hole_row), str(hole_col)], stdout=subprocess.PIPE,
                                    text=True)
