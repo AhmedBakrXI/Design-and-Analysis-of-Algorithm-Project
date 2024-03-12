@@ -1,0 +1,16 @@
+#ifndef BOX_
+#define BOX_
+
+
+class Box
+{
+    public:
+        Box();
+        virtual ~Box();
+
+    protected:
+
+    private:
+};
+
+#endif // BOX_
