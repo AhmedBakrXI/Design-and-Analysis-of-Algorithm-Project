@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "First_Algorithm___Divide_and_Conquer",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "First_Algorithm___Divide_and_Conquer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-First_Algorithm___Divide_and_Conquer-Debug-0eff307edf76941fca5d.json",
+					"name" : "First_Algorithm___Divide_and_Conquer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm - Divide and Conquer/cmake-build-debug",
+		"source" : "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/First Algorithm - Divide and Conquer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

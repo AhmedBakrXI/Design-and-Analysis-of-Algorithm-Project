@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Third_Algorithm___Brute_Force",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Third_Algorithm___Brute_Force::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Third_Algorithm___Brute_Force-Debug-432176414926dd3a44a3.json",
+					"name" : "Third_Algorithm___Brute_Force",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/Third Algorithm - Brute Force/cmake-build-debug",
+		"source" : "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 1/CLI_Backend/Third Algorithm - Brute Force"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
