@@ -6,14 +6,14 @@ to an adjacent hiding spot between every two consecutive shots.
 Design a Dynamic Programing algorithm that
 guarantees hitting the target.
 <hr>
-<b>solution:<b>
-T implementing a dynamic programming solution to find the minimum number of shots needed to guarantee hitting a target positioned at one of several hiding spots. The problem assumes that the target can move between hiding spots, and the goal is to determine the minimum shots required to ensure a hit, regardless of the target's movements.
+<h1>solution:<h1>
+<p>implementing a dynamic programming solution to find the minimum number of shots needed to guarantee hitting a target positioned at one of several hiding spots. The problem assumes that the target can move between hiding spots, and the goal is to determine the minimum shots required to ensure a hit, regardless of the target's movements.
 
 The minShotsToHitTarget function takes an integer n representing the number of hiding spots and returns the minimum shots needed. The program uses a dynamic programming approach to build an array DP, where DP[i] represents the minimum shots required to hit the target at the i-th hiding spot.
 
 The DP array is initialized with maximum integer values, except for the base case DP[1], where no shots are needed to hit the target at the first hiding spot. The program then iterates through all hiding spots, considering all possible positions for the target to move.
 
-For each hiding spot i, the program iterates through potential target positions j and updates DP[i] based on the minimum shots needed from the previous hiding spot.
+For each hiding spot i, the program iterates through potential target positions j and updates DP[i] based on the minimum shots needed from the previous hiding spot.<p>
 
 # Members:
 <table>
