@@ -14,9 +14,10 @@ moves. (Toggling one switch is considered one move.) Also find the minimum numbe
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="33.33%"><a href="https://github.com/Ahmed-Khaled-Abdelmaksod"><img src="https://github.com/Ahmed-Khaled-Abdelmaksod.png" width="100px;" alt="Ahmed Khaled"/><br /><sub><b>Ahmed Khaled</b></sub></a><br />🤨</td>
-      <td align="center" valign="top" width="33.33%"><a href="https://github.com/AhmedBakrXI"><img src="https://github.com/AhmedBakrXI.png" width="100px;" alt="Bakr"/><br /><sub><b>Ahmed Bakr</b></sub></a><br />👨‍💻</td>
-      <td align="center" valign="top" width="33.33%"><a href="https://github.com/waelmarwan7"><img src="https://github.com/waelmarwan7.png" width="100px;" alt="Marwan"/><br /><sub><b>Marwan Wael</b></sub></a><br />💥</td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/Ahmed-Khaled-Abdelmaksod"><img src="https://github.com/Ahmed-Khaled-Abdelmaksod.png" width="100px;" alt="Ahmed Khaled"/><br /><sub><b>Ahmed Khaled</b></sub></a><br />🤨</td>
+       <td align="center" valign="top" width="25%"><a href="https://github.com/adhamkhaled312"><img src="https://github.com/adhamkhaled312.png" width="100px;" alt="Adham"/><br /><sub><b>Adham Khaled</b></sub></a><br />😏</td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/AhmedBakrXI"><img src="https://github.com/AhmedBakrXI.png" width="100px;" alt="Bakr"/><br /><sub><b>Ahmed Bakr</b></sub></a><br />👨‍💻</td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/waelmarwan7"><img src="https://github.com/waelmarwan7.png" width="100px;" alt="Marwan"/><br /><sub><b>Marwan Wael</b></sub></a><br />💥</td>
     </tr>
   </tbody>
 </table>
