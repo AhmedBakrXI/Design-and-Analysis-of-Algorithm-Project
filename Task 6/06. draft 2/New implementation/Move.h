@@ -14,8 +14,10 @@
 #include <iostream>
 #include <vector>
 #include "ChessBoard.h"
-#include "Graph.h"
 
+
+class Graph;
+class PossibleMoves;
 using namespace std;
 
 
@@ -40,8 +42,8 @@ public:
     Move(int oldPos, int newPos, string knight, int totalHeuristicDifference):
             oldPos(oldPos), newPos(newPos), knight(knight),  totalHeuristicDifference(totalHeuristicDifference){}
 
-	Move(int oldPos, int newPos, string knight, int totalHeuristicDifference, PossibleMoves possibleMovesList):
-		oldPos(oldPos), newPos(newPos), knight(knight),  totalHeuristicDifference(totalHeuristicDifference), possibleMovesList(possibleMovesList){}
+    Move(int oldPos, int newPos, string knight, int totalHeuristicDifference, PossibleMoves possibleMovesList):
+    		oldPos(oldPos), newPos(newPos), knight(knight),  totalHeuristicDifference(totalHeuristicDifference), possibleMovesList(possibleMovesList){}
 
 	/**
 	 * @brief Retrieves the name of the knight.

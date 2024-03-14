@@ -6,7 +6,8 @@
  * @date   March 2024
  *********************************************************************/
 #include "Graph.h"
-
+#include "PossibleMoves.h"
+#include "Move.h"
 vector<vector<Move>> Graph::solvePuzzle() {
 
     // choose any knight

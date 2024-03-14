@@ -3,7 +3,8 @@
 //
 
 #include "PossibleMoves.h"
-
+#include "Move.h"
+#include "Graph.h"
 vector<Move> PossibleMoves::allMoves() {
     vector<Move> result;
     for(int i = 0; i<12; i++){

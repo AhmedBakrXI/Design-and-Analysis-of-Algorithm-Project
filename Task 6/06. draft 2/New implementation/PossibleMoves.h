@@ -4,15 +4,16 @@
 
 #ifndef POSSIBLE_MOVES_H
 #define POSSIBLE_MOVES_H
-#include "Graph.h"
-#include "ChessBoard.h"
-#include "Move.h"
-#include <algorithm>
 
+#include "ChessBoard.h"
+#include <algorithm>
+class Move;
+class Graph;
 using namespace std;
 
 class PossibleMoves{
 public:
+
     PossibleMoves(Graph& g,ChessBoard& b): graph(g), board(b), indexChosen(0), moves(allMoves()) {}
     PossibleMoves(const PossibleMoves& other) :
             board(other.board),

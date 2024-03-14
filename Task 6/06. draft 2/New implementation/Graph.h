@@ -14,14 +14,15 @@
 
 #include "ChessBoard.h"
 #include "PossibleMoves.h"
-#include "Move.h"
+
 #include <utility>
 #include <deque>
 #include <iostream>
 #include <cstdlib> // For rand() and srand()
 #include <ctime>   // For time()
 
-
+class PossibleMoves;
+class Move;
 using namespace std;
 
 
