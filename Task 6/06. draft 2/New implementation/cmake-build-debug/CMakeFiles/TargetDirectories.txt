@@ -1,0 +1,3 @@
+D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Task 6/New implementation/cmake-build-debug/CMakeFiles/New_implementation.dir
+D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Task 6/New implementation/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Task 6/New implementation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
