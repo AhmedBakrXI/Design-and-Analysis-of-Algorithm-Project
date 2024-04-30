@@ -23,7 +23,7 @@ To solve this problem using dynamic programming, we can follow these steps:
 - Once we have computed the count of valid tilings, we can backtrack to find the actual tiling by storing the colors used for each tromino in another 2D array.
 
 ## Pseudocode
-```python
+```scss
 // Declare global variables
 int gridSize, xCoordinate, yCoordinate, count = 0;
 int grid[128][128];
