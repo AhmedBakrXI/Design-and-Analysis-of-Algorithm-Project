@@ -89,7 +89,7 @@ end
 ```
 
 ## 4. Complexity Analysis
-- **Time Complexity:** The time complexity of the greedy algorithm is O(n), as it iterates through the coins to form pairs and calculates the minimum number of moves.
+- **Time Complexity:** The time complexity of the greedy algorithm is O(n^2) omega(n), as it iterates through the coins to form pairs and calculates the minimum number of moves.
 - **Space Complexity:** The space complexity is also O(n), as the algorithm stores the sequence of moves needed to form pairs.
 
 ## 5. The Used Algorithm
