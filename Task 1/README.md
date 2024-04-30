@@ -131,7 +131,7 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 ## Simple Output
 **Input:** 8 3 3
 
-**output**
+**Output**
 ```
 3       3       1       1       1       1       2       2
 3       1       1       1       1       1       1       2
@@ -145,7 +145,7 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 
 **Input:** 4 1 2
 
-**output**
+**Output**
 ```
 1       -1      1       1
 1       1       1       1
@@ -154,6 +154,7 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 ```
 
 ## GUI Visualization
+https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/f402b6ad-6c95-4d5d-a2a5-505b2bdf8618
 
 ## Members
 <table>
