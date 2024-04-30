@@ -128,7 +128,9 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 - **Ease of Implementation:** Brute force is the easiest to implement, followed by Divide and Conquer. Dynamic programming requires more careful handling due to state transitions and memoization.
 - In summary, if efficiency is the primary concern, Divide and Conquer is the best choice. However, if ease of implementation is more important or if the problem size is small enough to tolerate the exponential complexity, Brute Force might suffice. Dynamic Programming strikes a balance between efficiency and ease of implementation but may be overkill for smaller problem instances.
 
-## Simple output
+## Simple Output
+input 8 3 3
+![image](https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/46849fdc-429d-4a1a-855a-da25337fcd15)
 
 ## GUI Visualization
 
