@@ -5,21 +5,21 @@ We are given a 2n × 2n board with one missing square. Our task is to tile this 
 
 ## Algorithm
 To solve this problem using dynamic programming, we can follow these steps:
-### a. Define State:
+### A. Define State:
 - Let's define our state as a tuple `(i, mask)`, where:
   - `i` represents the current column we are filling (from 0 to 2n - 1).
   - `mask` is an integer that represents the colors used in the trominoes in the previous column. We can use binary representation where each bit represents whether a color is used or not.
-### b. Base Case:
+### B. Base Case:
 - When `i = 2n`, we have filled the entire board, so we return 1 (indicating success).
-### c. Recursive Step:
+### C. Recursive Step:
 - At each column `i`, we iterate through all possible ways to place a tromino.
 - We consider three cases for each position in the column:
   1. If the square is already filled, we move to the next square.
   2. If we can place a tromino vertically, we recursively call the function for the next column with updated mask and position.
   3. If we can place a tromino horizontally, we recursively call the function for the next column with updated mask and position.
-### d. Memoization:
+### D. Memoization:
 - To avoid recomputation, we memoize the results for each state `(i, mask)` in a 2D array.
-### e. Backtracking:
+### E. Backtracking:
 - Once we have computed the count of valid tilings, we can backtrack to find the actual tiling by storing the colors used for each tromino in another 2D array.
 
 ## Pseudocode
