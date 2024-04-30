@@ -130,7 +130,18 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 
 ## Simple Output
 input 8 3 3
-![image](https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/46849fdc-429d-4a1a-855a-da25337fcd15)
+
+output
+```
+3       3       1       1       1       1       2       2
+3       1       1       1       1       1       1       2
+1       1       -1      1       3       3       1       1
+1       1       1       1       2       3       1       1
+2       2       3       2       2       3       1       1
+2       2       3       3       3       3       1       1
+1       2       2       1       3       1       1       3
+1       1       1       1       3       3       3       3
+```
 
 ## GUI Visualization
 
