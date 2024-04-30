@@ -1,5 +1,4 @@
 # Task 01 - Tiling a 2n x 2n Board with Right Trominoes
----
 
 ## Problem Description
 We are given a 2n × 2n board with one missing square. Our task is to tile this board with right trominoes of three different colors, such that no pair of trominoes that share an edge have the same color. The right tromino is an L-shaped tile formed by three adjacent squares.
