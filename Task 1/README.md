@@ -154,7 +154,7 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 ```
 
 ## GUI Visualization
-https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/f402b6ad-6c95-4d5d-a2a5-505b2bdf8618
+https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/71d76063-97fc-414b-a1c8-603cb916dec0
 
 ## Members
 <table>
