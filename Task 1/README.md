@@ -24,25 +24,77 @@ To solve this problem using dynamic programming, we can follow these steps:
 
 ## Pseudocode
 ```python
-function countTilings(i, mask):
-    if i = 2n:
-        return 1
-    
-    if dp[i][mask] is not null:
-        return dp[i][mask]
-    
-    result = 0
-    
-    for each position in column i:
-        if the square is already filled:
-            continue
-        for each possible tromino placement:
-            if placement is valid:
-                new_mask = update mask based on colors used in current tromino
-                result += countTilings(i + 1, new_mask)
-    
-    dp[i][mask] = result
-    return result
+// Declare global variables
+int gridSize, xCoordinate, yCoordinate, count = 0;
+int grid[128][128];
+
+// Function to place a tile at given coordinates
+function placeTile(int x1, int y1, int x2, int y2, int x3, int y3) {
+    // Generate a random count value
+    count = generateRandomCount();
+
+    // Mark the tiles in the grid with random numbers
+    grid[x1][y1] = count % 3 + 1;
+    grid[x2][y2] = count % 3 + 1;
+    grid[x3][y3] = count % 3 + 1;
+}
+
+// Function to generate a random count value
+function generateRandomCount() {
+    return randomInteger(1, RAND_MAX);
+}
+
+// Function based on divide and conquer to fill the grid with tiles recursively
+function tile(int size, int startX, int startY) {
+    // Variables to store the coordinates of the hole
+    int holeRow, holeCol;
+
+    // Base case: if the grid size is 2x2
+    if (size == 2) {
+        // Generate a random count value
+        count = generateRandomCount();
+
+        // Place tiles in the grid
+        for i = 0 to size - 1 {
+            for j = 0 to size - 1 {
+                if grid[startX + i][startY + j] == 0 {
+                    grid[startX + i][startY + j] = count % 3 + 1;
+                }
+            }
+        }
+        return;
+    }
+
+    // Finding hole location
+    for i = startX to startX + size - 1 {
+        for j = startY to startY + size - 1 {
+            if grid[i][j] != 0 {
+                holeRow = i;
+                holeCol = j;
+            }
+        }
+    }
+
+    // Calculate half of the 'size' variable
+    int half = size / 2;
+
+    // Placing tiles in the respective quadrants based on the location of the hole
+    if holeRow < startX + half && holeCol < startY + half {
+        placeTile(startX + half, startY + half - 1, startX + half, startY + half, startX + half - 1, startY + half);
+    } else if holeRow >= startX + half && holeCol < startY + half {
+        placeTile(startX + half - 1, startY + half, startX + half, startY + half, startX + half - 1, startY + half - 1);
+    } else if holeRow < startX + half && holeCol >= startY + half {
+        placeTile(startX + half, startY + half - 1, startX + half, startY + half, startX + half - 1, startY + half - 1);
+    } else if holeRow >= startX + half && holeCol >= startY + half {
+        placeTile(startX + half - 1, startY + half, startX + half, startY + half - 1, startX + half - 1, startY + half - 1);
+    }
+
+    // Recursively divide the grid into 4 quadrants and fill them with tiles
+    tile(half, startX, startY + half); // Top right quadrant
+    tile(half, startX, startY); // Top left quadrant
+    tile(half, startX + half, startY); // Bottom left quadrant
+    tile(half, startX + half, startY + half); // Bottom right quadrant
+}
 ```
 
 ## Complexity Analysis
