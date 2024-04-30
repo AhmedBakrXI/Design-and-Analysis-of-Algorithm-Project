@@ -10,7 +10,7 @@ In this problem, there are n coins initially placed in a row. The objective is t
 3. Continue this process until n/2 pairs of coins are formed.
 
 ## 3. Pseudocode
-```pseudo
+```vbnet
 // Function to check if it's possible to solve the problem for given 'n'
 function check_possible(n):
     if n % 4 == 0:
