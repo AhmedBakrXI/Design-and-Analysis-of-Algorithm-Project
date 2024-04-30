@@ -92,5 +92,6 @@ int main() {
             cout << " " << coins[i];
         }
     }
+    delete[] coins;
     return 0;
 }
