@@ -23,78 +23,78 @@ To solve this problem using dynamic programming, we can follow these steps:
 - Once we have computed the count of valid tilings, we can backtrack to find the actual tiling by storing the colors used for each tromino in another 2D array.
 
 ## Pseudocode
-```vbnet
-// Declare global variables
-int gridSize, xCoordinate, yCoordinate, count = 0;
-int grid[128][128];
+```lua
+-- Declare global variables
+local gridSize, xCoordinate, yCoordinate, count = 0
+local grid = {}
 
-// Function to place a tile at given coordinates
-function placeTile(int x1, int y1, int x2, int y2, int x3, int y3) {
-    // Generate a random count value
-    count = generateRandomCount();
+-- Function to place a tile at given coordinates
+function placeTile(x1, y1, x2, y2, x3, y3)
+    -- Generate a random count value
+    count = generateRandomCount()
 
-    // Mark the tiles in the grid with random numbers
-    grid[x1][y1] = count % 3 + 1;
-    grid[x2][y2] = count % 3 + 1;
-    grid[x3][y3] = count % 3 + 1;
-}
+    -- Mark the tiles in the grid with random numbers
+    grid[x1][y1] = count % 3 + 1
+    grid[x2][y2] = count % 3 + 1
+    grid[x3][y3] = count % 3 + 1
+end
 
-// Function to generate a random count value
-function generateRandomCount() {
-    return randomInteger(1, RAND_MAX);
-}
+-- Function to generate a random count value
+function generateRandomCount()
+    return math.random(1, RAND_MAX)
+end
 
-// Function based on divide and conquer to fill the grid with tiles recursively
-function tile(int size, int startX, int startY) {
-    // Variables to store the coordinates of the hole
-    int holeRow, holeCol;
+-- Function based on divide and conquer to fill the grid with tiles recursively
+function tile(size, startX, startY)
+    -- Variables to store the coordinates of the hole
+    local holeRow, holeCol
 
-    // Base case: if the grid size is 2x2
-    if (size == 2) {
-        // Generate a random count value
-        count = generateRandomCount();
+    -- Base case: if the grid size is 2x2
+    if size == 2 then
+        -- Generate a random count value
+        count = generateRandomCount()
 
-        // Place tiles in the grid
-        for i = 0 to size - 1 {
-            for j = 0 to size - 1 {
-                if grid[startX + i][startY + j] == 0 {
-                    grid[startX + i][startY + j] = count % 3 + 1;
-                }
-            }
-        }
-        return;
-    }
+        -- Place tiles in the grid
+        for i = 0, size - 1 do
+            for j = 0, size - 1 do
+                if grid[startX + i][startY + j] == 0 then
+                    grid[startX + i][startY + j] = count % 3 + 1
+                end
+            end
+        end
+        return
+    end
 
-    // Finding hole location
-    for i = startX to startX + size - 1 {
-        for j = startY to startY + size - 1 {
-            if grid[i][j] != 0 {
-                holeRow = i;
-                holeCol = j;
-            }
-        }
-    }
+    -- Finding hole location
+    for i = startX, startX + size - 1 do
+        for j = startY, startY + size - 1 do
+            if grid[i][j] ~= 0 then
+                holeRow = i
+                holeCol = j
+            end
+        end
+    end
 
-    // Calculate half of the 'size' variable
-    int half = size / 2;
+    -- Calculate half of the 'size' variable
+    local half = size / 2
 
-    // Placing tiles in the respective quadrants based on the location of the hole
-    if holeRow < startX + half && holeCol < startY + half {
-        placeTile(startX + half, startY + half - 1, startX + half, startY + half, startX + half - 1, startY + half);
-    } else if holeRow >= startX + half && holeCol < startY + half {
-        placeTile(startX + half - 1, startY + half, startX + half, startY + half, startX + half - 1, startY + half - 1);
-    } else if holeRow < startX + half && holeCol >= startY + half {
-        placeTile(startX + half, startY + half - 1, startX + half, startY + half, startX + half - 1, startY + half - 1);
-    } else if holeRow >= startX + half && holeCol >= startY + half {
-        placeTile(startX + half - 1, startY + half, startX + half, startY + half - 1, startX + half - 1, startY + half - 1);
-    }
+    -- Placing tiles in the respective quadrants based on the location of the hole
+    if holeRow < startX + half and holeCol < startY + half then
+        placeTile(startX + half, startY + half - 1, startX + half, startY + half, startX + half - 1, startY + half)
+    elseif holeRow >= startX + half and holeCol < startY + half then
+        placeTile(startX + half - 1, startY + half, startX + half, startY + half, startX + half - 1, startY + half - 1)
+    elseif holeRow < startX + half and holeCol >= startY + half then
+        placeTile(startX + half, startY + half - 1, startX + half, startY + half, startX + half - 1, startY + half - 1)
+    elseif holeRow >= startX + half and holeCol >= startY + half then
+        placeTile(startX + half - 1, startY + half, startX + half, startY + half - 1, startX + half - 1, startY + half - 1)
+    end
 
-    // Recursively divide the grid into 4 quadrants and fill them with tiles
-    tile(half, startX, startY + half); // Top right quadrant
-    tile(half, startX, startY); // Top left quadrant
-    tile(half, startX + half, startY); // Bottom left quadrant
-    tile(half, startX + half, startY + half); // Bottom right quadrant
-}
+    -- Recursively divide the grid into 4 quadrants and fill them with tiles
+    tile(half, startX, startY + half)      -- Top right quadrant
+    tile(half, startX, startY)             -- Top left quadrant
+    tile(half, startX + half, startY)      -- Bottom left quadrant
+    tile(half, startX + half, startY + half) -- Bottom right quadrant
+end
 ```
 
 ## Complexity Analysis
