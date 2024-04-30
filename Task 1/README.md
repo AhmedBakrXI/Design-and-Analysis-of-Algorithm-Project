@@ -129,8 +129,9 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 - In summary, if efficiency is the primary concern, Divide and Conquer is the best choice. However, if ease of implementation is more important or if the problem size is small enough to tolerate the exponential complexity, Brute Force might suffice. Dynamic Programming strikes a balance between efficiency and ease of implementation but may be overkill for smaller problem instances.
 
 ## Simple Output
-- **Input:** 8 3 3
-- **output**
+**Input:** 8 3 3
+
+**output**
 ```
 3       3       1       1       1       1       2       2
 3       1       1       1       1       1       1       2
@@ -142,13 +143,14 @@ Let's compare the three algorithms: Divide and Conquer, Dynamic Programming, and
 1       1       1       1       3       3       3       3
 ```
 
-- **Input:** 4 1 0
-- **output**
+**Input:** 4 1 2
+
+**output**
 ```
-3       3       1       1
-3       1       1       1
-2       1       1       1
-2       2       1       1
+1       -1      1       1
+1       1       1       1
+2       1       1       2
+2       2       2       2
 ```
 
 ## GUI Visualization
