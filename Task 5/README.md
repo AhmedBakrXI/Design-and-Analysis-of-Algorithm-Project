@@ -10,64 +10,82 @@ In this problem, there are n coins initially placed in a row. The objective is t
 3. Continue this process until n/2 pairs of coins are formed.
 
 ## 3. Pseudocode
-```cpp
-// Function to check if it's possible to solve the problem for given 'n'
-function check_possible(n):
-    if n % 4 == 0:
+```lua
+-- Function to check if it's possible to solve the problem for given 'n'
+function check_possible(n)
+    if n % 4 == 0 then
         return true
+    end
     return false
+end
 
-// Function to check if the puzzle is solved
-function check_done(coins, size):
-    numberOfTwos = 0
-    numberOfZeroes = 0
-    for i from 0 to size - 1:
-        if coins[i] == 2:
-            numberOfTwos++
-        else if coins[i] == 0:
-            numberOfZeroes++
-    return numberOfTwos == size / 2 && numberOfZeroes == size / 2
+-- Function to check if the puzzle is solved
+function check_done(coins, size)
+    local numberOfTwos = 0
+    local numberOfZeroes = 0
+    for i = 1, size do
+        if coins[i] == 2 then
+            numberOfTwos = numberOfTwos + 1
+        elseif coins[i] == 0 then
+            numberOfZeroes = numberOfZeroes + 1
+        end
+    end
+    return numberOfTwos == size / 2 and numberOfZeroes == size / 2
+end
 
-// Function to perform a jump
-function jump(coins, coin1_position, coin2_position):
+-- Function to perform a jump
+function jump(coins, coin1_position, coin2_position)
     coins[coin1_position] = 0
     coins[coin2_position] = 2
+end
 
-// Function to check if a move is possible
-function move_possible(coins, pos1, pos2, moveNum):
-    if coins[pos1] && coins[pos2] != 1:
+-- Function to check if a move is possible
+function move_possible(coins, pos1, pos2, moveNum)
+    if coins[pos1] ~= 1 or coins[pos2] ~= 1 then
         return false
-    sum = 0
-    for i from pos1 + 1 to pos2 - 1:
-        sum += coins[i]
-    if sum == moveNum:
-        return true
-    return false
+    end
+    local sum = 0
+    for i = pos1 + 1, pos2 - 1 do
+        sum = sum + coins[i]
+    end
+    return sum == moveNum
+end
 
-// Function to find the minimum moves to solve the puzzle
-function minimum_moves(coins, size):
-    if !check_possible(size):
+-- Function to find the minimum moves to solve the puzzle
+function minimum_moves(coins, size)
+    if not check_possible(size) then
         return -1
-    move = 1
-    count = size - 1
-    for k from 0 to (size / 4) - 1:
-        while coins[count] != 1:
-            count--
-        for j from count - 1 down to 0:
-            if move_possible(coins, j, count, move):
+    end
+    local move = 1
+    local count = size
+    for k = 1, size / 4 do
+        while coins[count] ~= 1 do
+            count = count - 1
+        end
+        for j = count - 1, 1, -1 do
+            if move_possible(coins, j, count, move) then
                 jump(coins, j, count)
-                move++
-                count--
+                move = move + 1
+                count = count - 1
                 break
-    for k from 0 to 3 * size / 4:
-        if coins[k] != 1:
-            continue
-        for j from k + 1 to size - 1:
-            if move_possible(coins, k, j, move):
+            end
+        end
+    end
+    for k = 1, 3 * size / 4 do
+        if coins[k] ~= 1 then
+            goto continue
+        end
+        for j = k + 1, size do
+            if move_possible(coins, k, j, move) then
                 jump(coins, k, j)
-                move++
+                move = move + 1
                 break
+            end
+        end
+        ::continue::
+    end
     return move - 1
+end
 ```
 
 ## 4. Complexity Analysis
