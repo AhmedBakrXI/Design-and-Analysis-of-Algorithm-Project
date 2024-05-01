@@ -18,12 +18,12 @@ int largestK(int n) {
 
 void traditionalThreePeg(int n, char source, char destination, char auxiliary) {
     if (n == 1) {
-        cout << "\n Move disk " << n << " from rod " << source << " to rod " << destination;
+        cout << "Move disk " << n << " from rod " << source << " to rod " << destination << endl;
         moveCount++;
         return;
     }
     traditionalThreePeg(n - 1, source, auxiliary, destination);
-    cout << "\n Move disk " << n << " from rod " << source << " to rod " << destination;
+    cout << "Move disk " << n << " from rod " << source << " to rod " << destination << endl;
     moveCount++;
     traditionalThreePeg(n - 1, auxiliary, destination, source);
 }
@@ -32,7 +32,7 @@ void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, cha
     if (n == 0)
         return;
     if (n == 1) {
-        cout << "\n Move disk " << n << " from rod " << source << " to rod " << destination;
+        cout << "Move disk " << n << " from rod " << source << " to rod " << destination << endl;
         moveCount++;
         return;
     }
@@ -41,7 +41,7 @@ void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, cha
 
     fourPegAlgorithm(n - k, source, auxiliary1, auxiliary2, destination);
 
-    cout << "\n Move disks " << n - k + 1 << " to " << n << " from rod " << source << " to rod " << destination;
+    cout << "Move disks " << n - k + 1 << " to " << n << " from rod " << source << " to rod " << destination << endl;
 
     traditionalThreePeg(k, source, destination, auxiliary1);
 
@@ -59,12 +59,14 @@ int main(int argc, char* argv[]) {
     // Determine the correct value of k
     int k = largestK(n);
     cout << "Optimal value of k for n = " << n << ": " << k << endl;
+    cout << "------------------------------------------------" << endl;
 
     // A, B, C and D are names of rods
     fourPegAlgorithm(n, 'A', 'D', 'B', 'C');
 
     // Print the total number of moves
-    cout << "\nTotal moves made: " << moveCount << endl;
+    cout << "------------------------------------------------" << endl;
+    cout << "Total moves made: " << moveCount << endl;
 
     return 0;
 }
