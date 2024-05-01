@@ -25,6 +25,7 @@ private:
 public:
     State(){
         state = {'W','W','W','E','E','E','E','E','E','B','B','B'};
+        calculateHeuristic();
     }
 
     State(vector<char> _state) : heuristic(0) {
