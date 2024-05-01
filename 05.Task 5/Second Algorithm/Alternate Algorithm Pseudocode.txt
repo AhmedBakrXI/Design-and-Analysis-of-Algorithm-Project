@@ -1,0 +1,71 @@
+constraints: 
+
+    jump only over a single coin 
+    1st move jump only 1 place 
+    2nd move jump 2 places 
+    3rd move jump 3 places
+    ........................
+    n/2 move jump n/2 places
+    Any empty space between adjacent coins is ignored
+
+objective: 
+
+    minimum number of moves to get n/2 pairs from n coins 
+
+assumptions:
+    n will not exceed the max number represented using int data type	
+    n is an even number to be able to make n/2 coin pairs 
+    input array or of size n 
+    0 means no coin at a position i 
+    1 means 1 coin at a position i
+    2 means 2 coins at a position i
+
+
+complexity:
+    time complexity of the check function is O(logn) as it uses the pow function
+    time complexity of the minimun_moves function is O(n)
+    so overall complexity is O(n)
+  
+pseudocode:
+
+function check_possible(int n):
+    if n>0 :
+        // loop to 31 as it will give a very large number
+        for int i = 2; i<31; i++:
+            if n == pow (2,i)) -2 :
+                return true
+            
+    else return false
+
+
+
+
+function minimum_moves(int n, int counter = 1): //counter is passed as a parameter so its value can be retained across recursive calls
+    // Base case: if there are only 2 coins, return 1 move
+    if n == 2:
+        return counter
+  
+    // Increment counter if not base case
+    counter++
+    //keep calling recursively using the new counter
+    return minimum_moves(n - 2, counter)
+
+
+
+
+
+function main():
+    int n
+    cout<<"Enter number of coins"
+    cin >> n
+
+    if (!check_possible(n)):
+	cout<<"Not possible"
+        
+   else:
+	int result = minimum_moves(n);
+        cout << "Minimum number of moves: " << result
+
+
+
+    

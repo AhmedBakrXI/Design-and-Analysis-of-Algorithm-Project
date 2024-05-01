@@ -1,3 +1,0 @@
-D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 4/CLI_Backend/First Algorithm - Divide and Conquer/cmake-build-debug/CMakeFiles/First_Algorithm___Divide_and_Conquer.dir
-D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 4/CLI_Backend/First Algorithm - Divide and Conquer/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 4/CLI_Backend/First Algorithm - Divide and Conquer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
