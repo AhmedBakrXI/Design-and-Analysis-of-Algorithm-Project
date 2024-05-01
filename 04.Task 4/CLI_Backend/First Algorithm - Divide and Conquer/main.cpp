@@ -56,6 +56,10 @@ int main(int argc, char* argv[]) {
 
     int n = atoi(argv[1]); // Number of disks
 
+    // Determine the correct value of k
+    int k = largestK(n);
+    cout << "Optimal value of k for n = " << n << ": " << k << endl;
+
     // A, B, C and D are names of rods
     fourPegAlgorithm(n, 'A', 'D', 'B', 'C');
 
