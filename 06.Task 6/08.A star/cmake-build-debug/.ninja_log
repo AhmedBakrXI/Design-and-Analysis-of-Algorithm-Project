@@ -1,0 +1,15 @@
+# ninja log v5
+17	1236	7362482166745340	CMakeFiles/07__Hill_Climbing.dir/Path.cpp.obj	dab85d4af20605f1
+1580	1793	7362482172253793	07__Hill_Climbing.exe	958a212b1db7c57d
+6	1165	7362482166028563	CMakeFiles/07__Hill_Climbing.dir/State.cpp.obj	779dcc20738525b0
+13	1580	7362482170181532	CMakeFiles/07__Hill_Climbing.dir/main.cpp.obj	4e6d9f395cccb391
+14	959	7362605323311027	CMakeFiles/07__Hill_Climbing.dir/State.cpp.obj	afdb1e08b9077718
+10	1064	7362605324411049	CMakeFiles/07__Hill_Climbing.dir/Path.cpp.obj	2a47738e5dea313b
+5	1489	7362605328652801	CMakeFiles/07__Hill_Climbing.dir/main.cpp.obj	a9b5928aa7a2ca4f
+1490	1729	7362605331032802	07__Hill_Climbing.exe	958a212b1db7c57d
+5	1264	7362612551104904	CMakeFiles/07__Hill_Climbing.dir/main.cpp.obj	a9b5928aa7a2ca4f
+1271	1493	7362612553371010	07__Hill_Climbing.exe	958a212b1db7c57d
+5	1359	7362619479832334	CMakeFiles/07__Hill_Climbing.dir/main.cpp.obj	a9b5928aa7a2ca4f
+1359	1572	7362619481943965	07__Hill_Climbing.exe	958a212b1db7c57d
+4	1360	7362619607179695	CMakeFiles/07__Hill_Climbing.dir/main.cpp.obj	a9b5928aa7a2ca4f
+1361	1573	7362619609290065	07__Hill_Climbing.exe	958a212b1db7c57d
