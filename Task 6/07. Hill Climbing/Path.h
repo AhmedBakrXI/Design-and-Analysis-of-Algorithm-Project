@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "State.h"
+#include <random>
 
 using namespace std;
 
@@ -67,6 +68,7 @@ public:
     // Overload > operator
     friend bool operator>(const Path &p1, const Path &p2) {
         return p1.getHeuristic() > p2.getHeuristic();
+        /*return rand() & 1;*/
     }
 
     // Print method for Path class
@@ -77,6 +79,15 @@ public:
             std::cout << std::endl;
         }
     }
+
+    bool isSameEnd(Path p){
+        if(this->path.back() == p.path.back()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 };
 
 

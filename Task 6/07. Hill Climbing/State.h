@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <iostream>
+
 using namespace std;
 
 
@@ -23,8 +24,9 @@ private:
 
 
 public:
-    State(){
-        state = {'W','W','W','E','E','E','E','E','E','B','B','B'};
+    State() {
+        state = {'W', 'W', 'W', 'E', 'E', 'E', 'E', 'E', 'E', 'B', 'B', 'B'};
+        //state = {'B', 'B', 'B', 'E', 'E', 'E', 'W', 'E', 'W', 'E', 'W', 'E'};
         calculateHeuristic();
     }
 
@@ -45,11 +47,22 @@ public:
     void print() const {
         // Assuming the state is a 2D array with 4 rows and 4 columns
         for (int i = 0; i < 4; ++i) {
-            for (int j = 0; j < 4; ++j) {
-                std::cout << " " << state[i * 4 + j] << " ";
+            for (int j = 0; j < 3; ++j) {
+                std::cout << " " << state[i * 3 + j] << " ";
             }
             std::cout << std::endl;
         }
+    }
+
+    bool operator==(const State &other) const {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (state[i * 3 + j] != other.state[i * 3 + j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 };
 
