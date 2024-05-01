@@ -52,10 +52,10 @@ void State::calculateHeuristic()
    }
   }
   heuristic=sum;
-  cout << endl;
+  //cout << endl;
 }
 
-   bool State::isGoal(){
+   bool State::isGoal() const {
        vector<char> reference = {'B','B','B','E','E','E','E','E','E','W','W','W'};
        for(int idx = 0; idx <(int) reference.size();idx++)
        {
@@ -68,8 +68,7 @@ void State::calculateHeuristic()
 	// Check if the move is within the bounds of the chessboard
 	return (row >= 0 && row < actualRow && col >= 0 && col < actualCol);
 }
-   vector<State> State::generateStates()
-   {
+   vector<State> State::generateStates() {
       vector<State> returnVal,whiteKnights,blackKnights;
 
       for(int idx=0; idx<(int)getState().size();idx++)
