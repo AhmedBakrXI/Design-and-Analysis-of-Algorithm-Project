@@ -40,8 +40,13 @@ void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, cha
     fourPegAlgorithm(n - k, auxiliary2, destination, auxiliary1, source);
 }
 
-int main() {
-    int n = 8; // Number of disks
+int main(int argc, char* argv[]) {
+    if (argc != 2) {
+        cerr << "Usage: " << argv[0] << " <number of disks>" << endl;
+        return 1;
+    }
+
+    int n = atoi(argv[1]); // Number of disks
 
     // Determine the correct value of k
     int k = largestK(n);

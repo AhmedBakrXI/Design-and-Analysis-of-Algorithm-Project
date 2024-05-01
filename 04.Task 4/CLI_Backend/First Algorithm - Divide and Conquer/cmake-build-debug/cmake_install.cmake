@@ -1,4 +1,4 @@
-# Install script for directory: D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 4/CLI_Backend/First Algorithm - Divide and Conquer
+# Install script for directory: D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/04.Task 4/CLI_Backend/First Algorithm - Divide and Conquer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/Task 4/CLI_Backend/First Algorithm - Divide and Conquer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Projects/Software/Design-and-Analysis-of-Algorithm-Project/04.Task 4/CLI_Backend/First Algorithm - Divide and Conquer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
