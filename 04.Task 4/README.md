@@ -65,7 +65,67 @@ The time complexity of the Tower of Hanoi puzzle with four pegs depends on the n
 The algorithm used to solve the Tower of Hanoi puzzle with four pegs is a combination of recursive division and conquer, along with the traditional three-peg Tower of Hanoi algorithm. It ensures the optimal solution for transferring all the disks from the source peg to the destination peg while following the rules of the puzzle.
 
 ## 6. Simple Output
+**Input:** 4
 
+**Output**
+```
+Optimal value of k for n = 4: 2
+------------------------------------------------
+Move disk 1 from rod A to rod C
+Move disk 2 from rod A to rod B
+Move disk 1 from rod C to rod B
+Move disk 3 from rod A to rod C
+Move disk 4 from rod A to rod D
+Move disk 3 from rod C to rod D
+Move disk 1 from rod B to rod C
+Move disk 2 from rod B to rod D
+Move disk 1 from rod C to rod D
+------------------------------------------------
+Total moves made: 9
+```
+
+**Input:** 8
+
+**Output**
+```
+Optimal value of k for n = 8: 3
+------------------------------------------------
+Move disk 1 from rod A to rod D
+Move disk 2 from rod A to rod B
+Move disk 3 from rod A to rod C
+Move disk 2 from rod B to rod C
+Move disk 1 from rod D to rod C
+Move disk 4 from rod A to rod D
+Move disk 5 from rod A to rod B
+Move disk 4 from rod D to rod B
+Move disk 1 from rod C to rod D
+Move disk 2 from rod C to rod A
+Move disk 3 from rod C to rod B
+Move disk 2 from rod A to rod B
+Move disk 1 from rod D to rod B
+Move disk 6 from rod A to rod D
+Move disk 7 from rod A to rod C
+Move disk 6 from rod D to rod C
+Move disk 8 from rod A to rod D
+Move disk 6 from rod C to rod A
+Move disk 7 from rod C to rod D
+Move disk 6 from rod A to rod D
+Move disk 1 from rod B to rod A
+Move disk 2 from rod B to rod D
+Move disk 3 from rod B to rod C
+Move disk 2 from rod D to rod C
+Move disk 1 from rod A to rod C
+Move disk 4 from rod B to rod A
+Move disk 5 from rod B to rod D
+Move disk 4 from rod A to rod D
+Move disk 1 from rod C to rod A
+Move disk 2 from rod C to rod B
+Move disk 3 from rod C to rod D
+Move disk 2 from rod B to rod D
+Move disk 1 from rod A to rod D
+------------------------------------------------
+Total moves made: 33
+```
 
 ## Members:
 <table>
