@@ -13,14 +13,6 @@ def move_disk(canvas, disk_id, source_peg, dest_peg):
 
 # Function to solve Tower of Hanoi and visualize the solution
 def solve_hanoi(canvas, num_disks):
-    try:
-        num_disks = int(num_disks)
-        if num_disks <= 0:
-            raise ValueError
-    except ValueError:
-        messagebox.showerror("Error", "Please enter a valid positive integer for the number of disks.")
-        return
-
     # Call the C++ program
     try:
         output = subprocess.check_output(["./a.out", str(num_disks)], universal_newlines=True)
@@ -128,6 +120,9 @@ def validate_input(entry_value):
         num_disks = int(entry_value)
         if num_disks < 1:
             raise ValueError("Number of disks should be greater than or equal to 1")
+        elif num_disks > 8:
+            messagebox.showerror("Error", "The available range for visualization is from 1 to 8 disks.")
+            return None
         return num_disks
     except ValueError:
         messagebox.showerror("Error", "Please enter a valid positive integer for the number of disks.")
