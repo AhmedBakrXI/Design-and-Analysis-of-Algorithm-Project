@@ -70,7 +70,7 @@ def draw_disks(num_disks):
         peg_x, peg_y = peg_coordinates['A']  # Starting position on peg A
         disk_width = 100 - i * 10  # Adjust disk width as needed
         disk_id = canvas.create_rectangle(peg_x - disk_width // 2, peg_y - 20 - i * 20,
-                                          peg_x + disk_width // 2, peg_y - i * 20, fill="#e63946")
+                                          peg_x + disk_width // 2, peg_y - i * 20, fill="#d90429")
         disks.insert(0, disk_id)  # Insert the disk ID at the beginning of the list
     return disks
 
