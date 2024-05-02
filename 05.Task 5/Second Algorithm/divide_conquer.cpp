@@ -43,7 +43,7 @@ int minimum_moves(int coins[], int n, int counter = 4) {
         jump(coins, counter-1 , counter-3);
         return counter/2;
     }
-
+    
     jump(coins, counter-2 , counter-4);
     jump(coins, counter-1 , counter-3);
     counter = counter + 4;
@@ -59,7 +59,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         coins[i] = 1;
     }
-    int result = minimum_moves(coins, n);
+    
 
     if(!check_possible(n)){
         cout << "Not Possible!!" << endl;
@@ -70,6 +70,7 @@ int main() {
     }
 
     else {
+        int result = minimum_moves(coins, n);
         cout << "\nMinimum number of moves: " << result << endl;
         // Print the array at the end
         cout << "\nArray contents:";
