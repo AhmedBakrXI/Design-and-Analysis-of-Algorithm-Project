@@ -127,6 +127,9 @@ Move disk 1 from rod A to rod D
 Total moves made: 33
 ```
 
+## GUI Visualization
+https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/ae48a91e-4393-41f6-8074-63d22232cbdb
+
 ## Members:
 <table>
   <tbody>
