@@ -64,6 +64,9 @@ The time complexity of the Tower of Hanoi puzzle with four pegs depends on the n
 
 The algorithm used to solve the Tower of Hanoi puzzle with four pegs is a combination of recursive division and conquer, along with the traditional three-peg Tower of Hanoi algorithm. It ensures the optimal solution for transferring all the disks from the source peg to the destination peg while following the rules of the puzzle.
 
+## 6. Simple Output
+
+
 ## Members:
 <table>
   <tbody>
