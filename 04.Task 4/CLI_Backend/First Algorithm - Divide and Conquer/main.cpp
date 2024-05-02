@@ -41,8 +41,6 @@ void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, cha
 
     fourPegAlgorithm(n - k, source, auxiliary1, auxiliary2, destination);
 
-    cout << "Move disks " << n - k + 1 << " to " << n << " from rod " << source << " to rod " << destination << endl;
-
     traditionalThreePeg(k, source, destination, auxiliary1);
 
     fourPegAlgorithm(n - k, auxiliary2, destination, auxiliary1, source);

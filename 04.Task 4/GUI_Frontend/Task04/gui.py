@@ -44,6 +44,10 @@ def solve_hanoi(canvas, num_disks):
 # Create the main window
 root = tk.Tk()
 root.title("Tower of Hanoi Visualizer")
+root.geometry("700x500")  # Fixed window size
+
+# Disable window resizing
+root.resizable(False, False)
 
 # Canvas to visualize the pegs and disks
 canvas = tk.Canvas(root, width=700, height=400, bg="lightgray")
