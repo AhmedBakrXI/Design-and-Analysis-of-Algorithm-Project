@@ -51,28 +51,27 @@ base_y = 350
 base_width = 570
 
 # Canvas to visualize the pegs and disks
-canvas = tk.Canvas(root, width=700, height=400, bg="lightgray")
+canvas = tk.Canvas(root, width=700, height=400, bg="#e5e5e5")
 canvas.grid(row=0, column=0, columnspan=3)
 
 # Draw the base for all pegs
-canvas.create_rectangle(base_x, base_y, base_x + base_width, base_y + peg_base_size, fill="black")
+canvas.create_rectangle(base_x, base_y, base_x + base_width, base_y + peg_base_size, fill="#2b2d42")
 
 # Draw the pegs
 for peg, (x, y) in peg_coordinates.items():
     # Draw peg
-    canvas.create_rectangle(x - 10, y, x + 10, y - 200, fill="brown")
+    canvas.create_rectangle(x - 10, y, x + 10, y - 200, fill="#8d99ae")
 
 
-# Function to draw disks based on the number of disks
 def draw_disks(num_disks):
     global disks
     disks = []
     for i in range(num_disks):
         peg_x, peg_y = peg_coordinates['A']  # Starting position on peg A
         disk_width = 100 - i * 10  # Adjust disk width as needed
-        disk_id = canvas.create_rectangle(peg_x - disk_width // 2, peg_y - 20 - i * 20, peg_x + disk_width // 2,
-                                          peg_y - i * 20, fill="blue")
-        disks.append(disk_id)
+        disk_id = canvas.create_rectangle(peg_x - disk_width // 2, peg_y - 20 - i * 20,
+                                          peg_x + disk_width // 2, peg_y - i * 20, fill="#e63946")
+        disks.insert(0, disk_id)  # Insert the disk ID at the beginning of the list
     return disks
 
 
