@@ -60,6 +60,9 @@ end
 
 The time complexity of the Tower of Hanoi puzzle with four pegs depends on the number of disks (n). The recursive algorithm exhibits exponential time complexity, O(2^n), as the number of moves required grows exponentially with the number of disks.
 
+The space complexity of the Tower of Hanoi puzzle with four pegs is also exponential, O(2^n), primarily due to the recursive calls made during the execution of the algorithm. Each recursive call adds a new stack frame to the call stack, consuming memory proportional to the number of recursive calls. Additionally, the space complexity includes the space required to store the input parameters and any auxiliary variables used during the execution of the algorithm. However, these requirements are minimal compared to the recursive calls and do not significantly impact the overall space complexity. Therefore, the space complexity is dominated by the recursive calls and remains exponential, O(2^n), where n is the number of disks.
+
+
 ## 5. The Used Algorithm
 
 The algorithm used to solve the Tower of Hanoi puzzle with four pegs is a combination of recursive division and conquer, along with the traditional three-peg Tower of Hanoi algorithm. It ensures the optimal solution for transferring all the disks from the source peg to the destination peg while following the rules of the puzzle.
