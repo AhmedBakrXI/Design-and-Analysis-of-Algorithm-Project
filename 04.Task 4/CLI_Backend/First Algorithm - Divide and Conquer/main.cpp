@@ -16,16 +16,16 @@ int largestK(int n) {
     return k - 1;
 }
 
-void traditionalThreePeg(int n, char source, char destination, char auxiliary) {
+void traditionalThreePeg(int n, char source, char destination, char auxiliary, int startDisk, int endDisk) {
     if (n == 1) {
-        cout << "Move disk " << n << " from rod " << source << " to rod " << destination << endl;
+        cout << "Move disk " << startDisk << " from rod " << source << " to rod " << destination << endl;
         moveCount++;
         return;
     }
-    traditionalThreePeg(n - 1, source, auxiliary, destination);
-    cout << "Move disk " << n << " from rod " << source << " to rod " << destination << endl;
+    traditionalThreePeg(n - 1, source, auxiliary, destination, startDisk, endDisk);
+    cout << "Move disk " << endDisk << " from rod " << source << " to rod " << destination << endl;
     moveCount++;
-    traditionalThreePeg(n - 1, auxiliary, destination, source);
+    traditionalThreePeg(n - 1, auxiliary, destination, source, startDisk, endDisk);
 }
 
 void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, char auxiliary2) {
@@ -41,9 +41,9 @@ void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, cha
 
     fourPegAlgorithm(n - k, source, auxiliary1, auxiliary2, destination);
 
-    traditionalThreePeg(k, source, destination, auxiliary1);
+    traditionalThreePeg(k, source, destination, auxiliary2, n - k + 1, n);
 
-    fourPegAlgorithm(n - k, auxiliary2, destination, auxiliary1, source);
+    fourPegAlgorithm(n - k, auxiliary1, destination, auxiliary2, source);
 }
 
 int main(int argc, char* argv[]) {
