@@ -131,7 +131,7 @@ Total moves made: 33
 ```
 
 ## GUI Visualization
-https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/ae48a91e-4393-41f6-8074-63d22232cbdb
+https://github.com/AhmedBakrXI/Design-and-Analysis-of-Algorithm-Project/assets/90259729/22b07ee5-593d-475d-a100-e34434ee1c3d
 
 ## Members:
 <table>

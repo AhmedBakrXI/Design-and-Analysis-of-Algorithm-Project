@@ -1,7 +1,0 @@
-# ninja log v5
-11	620	7319830954505986	CMakeFiles/New_implementation.dir/Square.cpp.obj	a12cce7d1a354d57
-4	768	7320385463655999	CMakeFiles/New_implementation.dir/main.cpp.obj	f24454e6a7a5bd23
-856	1233	7320385468276033	New_implementation.exe	e08b622d2fba772e
-4	1021	7320384275314582	CMakeFiles/New_implementation.dir/ChessBoard.cpp.obj	1adfede8e5a9c34a
-14	99	7320395355672686	CMakeFiles/New_implementation.dir/Move.cpp.obj	5d41c1599a169fd3
-8	856	7320385464528365	CMakeFiles/New_implementation.dir/Graph.cpp.obj	b3663e12aab03839
