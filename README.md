@@ -21,7 +21,7 @@ Repository dedicated to collaborative work on projects related to the Design and
       <td align="center" valign="top" width="25%"><a href="https://github.com/Karim-308"><img src="https://github.com/Karim-308.png" width="100px;" alt="Kimo"/><br /><sub><b>Karim Ibrahim</b></sub></a><br />🫡</td>
       <td align="center" valign="top" width="25%"><a href="https://github.com/SemoMoh"><img src="https://github.com/SemoMoh.png" width="100px;" alt="Eslam"/><br /><sub><b>Eslam Mohammed</b></sub></a><br />🗡️</td>
       <td align="center" valign="top" width="25%"><a href="https://github.com/MightyMaya"><img src="https://github.com/MightyMaya.png" width="100px;" alt="Maya"/><br /><sub><b>Maya Sharaf</b></sub></a><br />🌷</td>
-      <td align="center" valign="top" width="25%"><a href="https://github.com/D3cipherd"><img src="https://github.com/D3cipherd.png" width="100px;" alt="Abd-Elrahman"/><br /><sub><b>Abdelrahman Elsayed</b></sub></a><br />🔇</td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/d3cypherd"><img src="https://github.com/d3cypherd.png" width="100px;" alt="Abd-Elrahman"/><br /><sub><b>Abdelrahman Elsayed</b></sub></a><br />🔇</td>
     </tr>
   </tbody>
 </table>
