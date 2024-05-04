@@ -8,43 +8,45 @@ using namespace std;
 Path solvePuzzle() {
     Path initPath = Path::getInitPath();
     priority_queue<Path, std::vector<Path>, greater<Path>> pq;
-
+    vector<Path> visitedPaths = vector<Path>();
+    visitedPaths.push_back(initPath);
     pq.push(initPath);
     while (!pq.empty()) {
+
         Path currentPath = pq.top();
         pq.pop();
 
-        // for testing
-        /*if(currentPath.getSize() == 15){
-            currentPath.print();
-            cout << "**********************************************************\n";
-        }*/
+        cout << "path: " << currentPath.getSize() << "\t";
+        cout << "h: " << currentPath.getHeuristic() << "\t";
+
         if (currentPath.isGoalReached()) {
             return currentPath;
         }
 
+        if(currentPath.getSize()  == 11){
+            cout << "\n**************************************************************\n";
+        }
         vector<Path> newPaths = currentPath.generatePaths();
-        for (auto const newPath: newPaths) {
+
+        for (auto newPath: newPaths) {
             if (newPath.getSize() <= 17) {
                 bool add = true;
-                // Copy elements to a vector
-                std::vector<Path> vec;
-                priority_queue<Path, vector<Path>, greater<Path>> copy = pq;
-                while (!copy.empty()) {
-                    vec.push_back(copy.top());
-                    copy.pop();
-                }
-                for (Path path : vec) {
-                    if (path.isSameEnd(newPath) && newPath.getSize() == path.getSize()) {
+
+                // check if the new path is visited already, if yes don't add it to the queue
+                for(const Path& toCompare : visitedPaths){
+                    if(newPath.equals(toCompare)){
                         add = false;
                         break;
                     }
                 }
-                if (add) {
+                if (add && !newPath.isBadPath()) {
                     pq.push(newPath);
+                    visitedPaths.push_back(newPath);
                 }
             }
         }
+        cout << "pq: " << pq.size() << endl;
+        cout << "visited: " << visitedPaths.size() << endl;
     }
 
     return Path::getInitPath();

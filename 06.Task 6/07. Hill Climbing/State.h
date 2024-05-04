@@ -2,20 +2,48 @@
 // Created by eslam on 01/05/2024.
 //
 
-#ifndef INC_07__HILL_CLIMBING_STATE_H
-#define INC_07__HILL_CLIMBING_STATE_H
+#ifndef INC_07_HILL_CLIMBING_STATE_H
+#define INC_07_HILL_CLIMBING_STATE_H
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
+
 
 using namespace std;
 
-
+/***
+ * The State class represents a configuration of knights on a 3x4 chessboard. It encapsulates the current state
+ * of the board along with methods for calculating the heuristic score, generating possible successor states,
+ * and performing other operations related to the problem of exchanging knights.
+ *
+ */
 class State {
 private:
+    ///
+    /// A vector representing the current configuration of knights on the chessboard. Each element of the vector
+    /// corresponds to a square on the board, where 'W' represents a white knight, 'B' represents a black knight, and
+    /// 'E' represents an empty square.
+    ///
     vector<char> state;
+    ///
+    /// An integer representing the heuristic score of the current state. This score is used to estimate the cost of
+    /// reaching the goal state from the current state.
+    /// The smaller the score, the closer to the goal state.
+    ///
     int heuristic;
 
+    /***
+     * Method to check if a move to a given position on the board is valid.
+     *
+     * @brief
+     *
+     * @param row
+     * @param col
+     * @param actualCol
+     * @param actualRow
+     * @return
+     */
     bool isValidMove(int row, int col, int actualCol, int actualRow);
 
     vector<State> moveChess(int position, vector<char> currentState);
@@ -24,47 +52,27 @@ private:
 
 
 public:
-    State() {
-        state = {'W', 'W', 'W', 'E', 'E', 'E', 'E', 'E', 'E', 'B', 'B', 'B'};
-        //state = {'B', 'B', 'B', 'E', 'E', 'E', 'W', 'E', 'W', 'E', 'W', 'E'};
-        calculateHeuristic();
-    }
+    explicit State();
 
-    State(vector<char> _state) : heuristic(0) {
-        for (int idx = 0; idx < (int) _state.size(); idx++) {
-            state.push_back(_state[idx]);
+    explicit State(const vector<char> &_state) : heuristic(0) {
+        for (char idx: _state) {
+            state.push_back(idx);
         }
     }
 
-    vector<char> getState() const { return state; }
+    [[nodiscard]] vector<char> getState() const;
 
-    int getHeuristic() const { return heuristic; }
+    [[nodiscard]] int getHeuristic() const;
 
-    bool isGoal() const;
+    [[nodiscard]] bool isGoal() const;
 
     vector<State> generateStates();
 
-    void print() const {
-        // Assuming the state is a 2D array with 4 rows and 4 columns
-        for (int i = 0; i < 4; ++i) {
-            for (int j = 0; j < 3; ++j) {
-                std::cout << " " << state[i * 3 + j] << " ";
-            }
-            std::cout << std::endl;
-        }
-    }
+    void print() const;
 
-    bool operator==(const State &other) const {
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (state[i * 3 + j] != other.state[i * 3 + j]) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+
+    bool equals(State state);
 };
 
 
-#endif //INC_07__HILL_CLIMBING_STATE_H
+#endif //INC_07_HILL_CLIMBING_STATE_H

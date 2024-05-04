@@ -1,4 +1,4 @@
-# Install script for directory: D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/Task 6/07. Hill Climbing
+# Install script for directory: D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/07. Hill Climbing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/Task 6/07. Hill Climbing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/07. Hill Climbing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

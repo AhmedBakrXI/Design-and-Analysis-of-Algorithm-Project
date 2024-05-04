@@ -41,6 +41,7 @@ public:
 
     int getHeuristic() const {
         return path.back().getHeuristic();
+        //return 5 * path.back().getHeuristic() / 7 + 2 * (17 - getSize() - 1) / 7;
     }
 
     std::vector<Path> generatePaths() {
@@ -80,14 +81,82 @@ public:
         }
     }
 
-    bool isSameEnd(Path p){
-        if(this->path.back() == p.path.back()){
-            return true;
-        } else {
+
+    bool operator==(const Path &obj) {
+        if (obj.path.size() != this->path.size()) {
             return false;
         }
+
+        for (int i = 0; i < path.size(); ++i) {
+            if (!path[i].equals(obj.path[i])) {
+                return false;
+            }
+        }
+        return true;
     }
 
+    bool equals(Path obj) {
+        if (obj.path.size() != this->path.size()) {
+            return false;
+        }
+
+        for (int i = 0; i < path.size(); ++i) {
+            if (!path[i].equals(obj.path[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    bool isBadPath() const {
+
+/*
+        if(path.size() >= 4){
+            if(path[3].getHeuristic() >= 17) {
+                return true;
+            }
+        }
+
+
+
+        if(path.size()>=9){
+            if(path[8].getHeuristic() >= 10){
+                return true;
+            }
+        }
+
+        if(path.size()>=11){
+            if (path[10].getHeuristic() >= 10) {
+                return true;
+            }
+        }
+
+        if(path.size()>=13){
+            if(path[12].getHeuristic() >= 7){
+                return true;
+            }
+        }
+*/
+        if(path.size()>=16){
+            if(path[15].getHeuristic() >= 3){
+                return true;
+            }
+        }
+
+        // Check condition for decreasing heuristic values
+        bool increasingHeuristic = false;
+        for (size_t i = 0; i < path.size() - 1; ++i) {
+            int currentHeuristic = path[i].getHeuristic();
+            int nextHeuristic = path[i + 1].getHeuristic();
+            if (currentHeuristic < nextHeuristic) {
+                if (increasingHeuristic) {
+                    return true; // Heuristic has increased for more than one step
+                }
+                increasingHeuristic = true;
+            }
+        }
+        return false; // Path is not bad
+    }
 };
 
 

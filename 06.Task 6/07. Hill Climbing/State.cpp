@@ -47,37 +47,13 @@ void State::calculateHeuristic() {
 
         }
     }
-    heuristic = sum;
-    //cout << endl;
+    heuristic = sum / 4;
 }
-
-/*void State::calculateHeuristic() {
-    // Define weights for different positions on the board
-    vector<vector<int>> positionWeights = {
-            {2, 3, 2},
-            {3, INT_MAX, 3},
-            {4, INT_MAX, 4},
-            {3, 4, 3}
-    };
-
-    int heuristic = 0;
-    for (int i = 0; i < 4; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            char piece = this->state[i * 3 + j];
-            if (piece == 'W') { // White knight
-                heuristic += positionWeights[i][j];
-            } else if (piece == 'B') { // Black knight
-                heuristic += positionWeights[3 - i][j]; // Reverse row index for black knights
-            }
-        }
-    }
-    this->heuristic = heuristic;
-}*/
 
 
 bool State::isGoal() const {
     vector<char> reference = {'B', 'B', 'B', 'E', 'E', 'E', 'E', 'E', 'E', 'W', 'W', 'W'};
-    for (int idx = 0; idx < (int) reference.size(); idx++) {
+    for (int idx = 0; idx < reference.size(); idx++) {
         if (reference[idx] != state[idx])
             return false;
     }
@@ -85,6 +61,19 @@ bool State::isGoal() const {
 }
 
 bool State::isValidMove(int row, int col, int actualCol, int actualRow) {
+    // count knight in the middle, max must be 3
+    int midKnightsCount = 0;
+    if (state[1 * 3 + 0] != 'E') midKnightsCount++;
+    if (state[1 * 3 + 2] != 'E') midKnightsCount++;
+    if (state[2 * 3 + 0] != 'E') midKnightsCount++;
+    if (state[2 * 3 + 2] != 'E') midKnightsCount++;
+
+    if (row == 1 && col == 0 || row == 1 && col == 2 || row == 2 && col == 0 || row == 2 && col == 2) {
+        if (midKnightsCount == 3) {
+            return false;
+        }
+    }
+
     // Check if the move is within the bounds of the chessboard
     return (row >= 0 && row < actualRow && col >= 0 && col < actualCol &&
             (row != 1 && col != 1 || row != 2 && col != 1));
@@ -113,3 +102,38 @@ vector<State> State::generateStates() {
 
 
 }
+
+bool State::equals(State state) {
+    for (int i = 0; i < 12; i++) {
+        if (this->state[i] != state.state[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+State::State() {
+    state = {'W', 'W', 'W', 'E', 'E', 'E', 'E', 'E', 'E', 'B', 'B', 'B'};
+    calculateHeuristic();
+}
+
+vector<char> State::getState() const {
+    return state;
+}
+
+int State::getHeuristic() const {
+    return heuristic;
+}
+
+void State::print() const {
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            std::cout << " " << state[i * 3 + j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+
+
+
