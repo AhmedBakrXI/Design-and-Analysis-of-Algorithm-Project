@@ -22,10 +22,10 @@ void traditionalThreePeg(int n, char source, char destination, char auxiliary, i
         moveCount++;
         return;
     }
-    traditionalThreePeg(n - 1, source, auxiliary, destination, startDisk, endDisk);
+    traditionalThreePeg(n - 1, source, auxiliary, destination, startDisk, endDisk - 1); // Update endDisk
     cout << "Move disk " << endDisk << " from rod " << source << " to rod " << destination << endl;
     moveCount++;
-    traditionalThreePeg(n - 1, auxiliary, destination, source, startDisk, endDisk);
+    traditionalThreePeg(n - 1, auxiliary, destination, source, startDisk, endDisk - 1); // Update endDisk
 }
 
 void fourPegAlgorithm(int n, char source, char destination, char auxiliary1, char auxiliary2) {

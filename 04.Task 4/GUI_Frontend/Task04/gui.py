@@ -14,7 +14,7 @@ def move_disk(canvas, disk_id, source_peg, dest_peg):
 # Function to solve Tower of Hanoi and visualize the solution
 def solve_hanoi(canvas, num_disks):
     # Call the C++ program
-    try:
+    # try:
         output = subprocess.check_output(["./a.out", str(num_disks)], universal_newlines=True)
         # Parse the output and visualize the solution here
         moves = output.strip().split('\n')
@@ -29,8 +29,8 @@ def solve_hanoi(canvas, num_disks):
             move_disk(canvas, disks[int(disk_no) - 1], source_peg, dest_peg)
             canvas.update()
             time.sleep(1)  # Adjust the delay as needed for visualization
-    except subprocess.CalledProcessError:
-        messagebox.showerror("Error", "Failed to execute the C++ program.")
+    # except subprocess.CalledProcessError:
+    #     messagebox.showerror("Error", "Failed to execute the C++ program.")
 
 
 # Create the main window
