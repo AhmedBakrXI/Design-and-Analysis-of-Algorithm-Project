@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "07__Hill_Climbing",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "07__Hill_Climbing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-07__Hill_Climbing-Debug-3dfa80a54f1f952164eb.json",
+					"name" : "07__Hill_Climbing",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug",
+		"source" : "D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

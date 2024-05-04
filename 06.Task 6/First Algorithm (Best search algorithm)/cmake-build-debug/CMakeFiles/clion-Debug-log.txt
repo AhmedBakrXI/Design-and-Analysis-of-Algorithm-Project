@@ -1,0 +1,68 @@
+"D:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S "D:\Engineering\04- Senior 1\Spring\Algorithms\Project\Repo\Design-and-Analysis-of-Algorithm-Project\06.Task 6\First Algorithm (Best search algorithm)" -B "D:\Engineering\04- Senior 1\Spring\Algorithms\Project\Repo\Design-and-Analysis-of-Algorithm-Project\06.Task 6\First Algorithm (Best search algorithm)\cmake-build-debug"
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+CMake Warning in D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i6tnmf/CMakeLists.txt:
+  The object file directory
+
+    D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i6tnmf/CMakeFiles/cmTC_89fe2.dir/
+
+  has 236 characters.  The maximum full path to an object file is 250
+  characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+
+    CMakeCCompilerABI.c.obj
+
+  cannot be safely placed under this directory.  The build may not work
+  correctly.
+
+
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+CMake Warning in D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9z27oy/CMakeLists.txt:
+  The object file directory
+
+    D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9z27oy/CMakeFiles/cmTC_82c38.dir/
+
+  has 236 characters.  The maximum full path to an object file is 250
+  characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+
+    CMakeCXXCompilerABI.cpp.obj
+
+  cannot be safely placed under this directory.  The build may not work
+  correctly.
+
+
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: D:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/g++.exe
+CMake Warning in D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mm7cp5/CMakeLists.txt:
+  The object file directory
+
+    D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mm7cp5/CMakeFiles/cmTC_47eb0.dir/
+
+  has 236 characters.  The maximum full path to an object file is 250
+  characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+
+    testCXXCompiler.cxx.obj
+
+  cannot be safely placed under this directory.  The build may not work
+  correctly.
+
+
+-- Check for working CXX compiler: D:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/g++.exe - works
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (5.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/First Algorithm (Best search algorithm)/cmake-build-debug

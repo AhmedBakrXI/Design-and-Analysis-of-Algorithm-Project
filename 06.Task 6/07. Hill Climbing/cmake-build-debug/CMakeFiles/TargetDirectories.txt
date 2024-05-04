@@ -1,3 +1,0 @@
-D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/07. Hill Climbing/cmake-build-debug/CMakeFiles/07__Hill_Climbing.dir
-D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/07. Hill Climbing/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Engineering/04- Senior 1/Spring/Algorithms/Project/Repo/Design-and-Analysis-of-Algorithm-Project/06.Task 6/07. Hill Climbing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
