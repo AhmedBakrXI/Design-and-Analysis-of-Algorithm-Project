@@ -86,6 +86,69 @@ We can make a closed tour on a chess board using a knight without moving to a sq
   </tbody>
 </table>
 
+## Another Approach
+Another approach to solve this problem would be to use backtracking but this results in stack overflow on big boards.
+Time Complexity would be O(8^(n^2)) and n is the number of cells in one row i.e. the board is n * n, since the algorithm tries 8 different moves each time the knight jumps on a square.
+Space Complexity would be O(N^2) where the board is N * N.
+
+``` python
+def knight_tour(board, pos_x, pos_y, x, y, move_num):
+    if move_num == N * N:
+        return True
+
+    for i in range(8):
+        next_x = x + X[i]
+        next_y = y + Y[i]
+
+        if 0 <= next_x < N and 0 <= next_y < N and board[next_x][next_y] == -1:
+            board[next_x][next_y] = move_num
+            visualize_move(pos_x, pos_y, next_x, next_y)
+
+            if knight_tour(board, pos_x, pos_y, next_x, next_y, move_num + 1):
+                return True
+
+            visualize_backtrack(next_x, next_y)
+            board[next_x][next_y] = -1
+
+    return Falsedef knight_tour(board, pos_x, pos_y, x, y, move_num):
+    if move_num == N * N:
+        return True
+
+    for i in range(8):
+        next_x = x + X[i]
+        next_y = y + Y[i]
+
+        if 0 <= next_x < N and 0 <= next_y < N and board[next_x][next_y] == -1:
+            board[next_x][next_y] = move_num
+            visualize_move(pos_x, pos_y, next_x, next_y)
+
+            if knight_tour(board, pos_x, pos_y, next_x, next_y, move_num + 1):
+                return True
+
+            visualize_backtrack(next_x, next_y)
+            board[next_x][next_y] = -1
+
+    return False
+
+def visualize_move(pos_x, pos_y, next_x, next_y):
+    pos_x.append(next_x)
+    pos_y.append(next_y)
+    print(f"Move to {next_x},{next_y}")
+
+def visualize_backtrack(next_x, next_y):
+    print(f"No place to move from {next_x},{next_y}: Backtrack")
+
+
+def visualize_move(pos_x, pos_y, next_x, next_y):
+    pos_x.append(next_x)
+    pos_y.append(next_y)
+    print(f"Move to {next_x},{next_y}")
+
+def visualize_backtrack(next_x, next_y):
+    print(f"No place to move from {next_x},{next_y}: Backtrack")
+
+```
+
 ## References
 https://sites.science.oregonstate.edu/math_reu/proceedings/REU_Proceedings/Proceedings2004/2004Ganzfried.pdf
 
